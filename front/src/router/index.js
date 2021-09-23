@@ -5,6 +5,7 @@ import TeamView from '@/views/TeamView.vue';
 import HistoryView from '@/views/HistoryView.vue';
 import ScheduleView from '@/views/ScheduleView.vue';
 import BoardView from '@/views/BoardView.vue';
+import RegisterView from '@/views/RegisterView.vue';
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,11 @@ const routes = [
     path: '/board',
     name: 'Board',
     component: BoardView
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: RegisterView
   },
 ]
 
