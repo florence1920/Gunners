@@ -3,18 +3,24 @@
         <router-link to='/' class="logo">
             <img src="../assets/arsenal_logo.png" alt="" width="100px">
         </router-link>
-        <li><router-link to='/team'>Team</router-link></li>
+        <li v-on:mouseover="doMouseOver" v-on:mouseleave="doMouseLeave">
+            <router-link to='/team' >Team</router-link>
+            <ul v-show="showBox" class="depth" >
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+            </ul>
+        </li>
         <li><router-link to='/history'>History</router-link></li>
         <li><router-link to='/schedule'>Schedule</router-link></li>
         <li><router-link to='/board'>Board</router-link></li>
         <li>
             <router-link to='/logIn'>Login</router-link>
         </li>
-        <div v-show="showBox" class="depth">
-            <router-link to='/squad'>squad</router-link>
-            <router-link to='/stats'>stats</router-link>
-        </div>
-
+        
         <!-- <router-link to='/'>Main</router-link>
         <router-link to='/team'>Team</router-link>
         <router-link to='/history'>history</router-link>
@@ -22,7 +28,7 @@
         <router-link to='/board'>board</router-link>
         <router-link to='/register'>회원가입</router-link>
         <div v-show="showBox" class="box"></div>
-        <button v-on:mouseover="doMouseOver" v-on:mouseleave="doMouseLeave">Click Me</button> -->
+         -->
     </ul>
 </template>
 
@@ -31,7 +37,7 @@ export default {
     data : function(){
         return{
             showBox : false,
-            message : 'hi'
+            message : 'hi',
         }
     },
     methods: {
