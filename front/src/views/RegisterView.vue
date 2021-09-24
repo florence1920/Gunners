@@ -1,12 +1,15 @@
 <template>
     <div>
-        회원가입
+        <sign-up></sign-up>
     </div>
 </template>
 
 <script>
+import SignUp from '@/components/SignUp.vue';
 export default {
-
+    components:{
+        SignUp
+    }
 }
 </script>
 
