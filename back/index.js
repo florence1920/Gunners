@@ -1,12 +1,16 @@
 import express from 'express';
 const app = express();
 const port = 3000;
+import cors from 'cors';
 import mongoose from 'mongoose';
 import User from './models/User.js'
 
 //application/json 타입 읽을 수 있도록
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
+
+//cors
+app.use(cors());
 
 //몽구스 DB 연결
 mongoose.connect('mongodb+srv://admin:admin@cluster0.snwm6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
