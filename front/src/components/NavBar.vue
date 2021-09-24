@@ -17,18 +17,15 @@
         <li><router-link to='/history'>History</router-link></li>
         <li><router-link to='/schedule'>Schedule</router-link></li>
         <li><router-link to='/board'>Board</router-link></li>
-        <li>
-            <router-link to='/logIn'>Login</router-link>
-        </li>
-        
-        <!-- <router-link to='/'>Main</router-link>
-        <router-link to='/team'>Team</router-link>
-        <router-link to='/history'>history</router-link>
-        <router-link to='/schedule'>schedule</router-link>
-        <router-link to='/board'>board</router-link>
-        <router-link to='/register'>회원가입</router-link>
-        <div v-show="showBox" class="box"></div>
-         -->
+
+        <li><router-link to='/logIn'>Login</router-link></li>
+        <li><router-link to='/register'>SignUp</router-link></li>
+        <div v-show="showBox" class="depth">
+            <router-link to='/squad'>squad</router-link>
+            <router-link to='/stats'>stats</router-link>
+        </div>
+        <button v-on:mouseover="doMouseOver" v-on:mouseleave="doMouseLeave">Click Me</button>
+
     </ul>
 </template>
 
