@@ -4,34 +4,54 @@
             <p class="tit">Join Us</p>
             <p class="sub">회원가입</p>
         </div>
-        <div class="personal_info">
-            <p>기본정보</p>
-            <ul class="personal">
-                <li>
-                    <span>아이디</span>
-                    <input type="text" name="id" placeholder="영문 소문자/숫자 4-20자">
-                </li>
-                <li>
-                    <span>비밀번호</span>
-                    <input type="text" name="password" placeholder="영문/숫자/특수문자 조합 8-16자">
-                </li>
-                <li>
-                    <span>이름</span>
-                    <input type="text" name="name">
-                </li>
+        <form  v-on:submit.prevent="send">
+            <div class="personal_info">
+                <p>기본정보</p>
+                <ul class="personal">
+                    <li>
+                        <span>아이디</span>
+                        <input type="text" name="id" placeholder="영문 소문자/숫자 4-20자" v-model="id">
+                    </li>
+                    <li>
+                        <span>비밀번호</span>
+                        <input type="text" name="password" placeholder="영문/숫자/특수문자 조합 8-16자" v-model="password">
+                    </li>
+                    <li>
+                        <span>이름</span>
+                        <input type="text" name="name" v-model="name">
+                    </li>
+                </ul>
+            </div>
+            <ul class="btnWrap">
+                <li><button type="button" class="previewBtn">이전단계</button></li>
+                <li><button type="submit" class="nextBtn">가입하기</button></li>
             </ul>
-        </div>
-        <ul class="btnWrap">
-            <li><button type="button" class="previewBtn">이전단계</button></li>
-            <li><button type="submit" class="nextBtn">가입하기</button></li>
-        </ul>
+        </form>
             
     </div>
 </template>
 
 <script>
+import { checkInfo } from '@/api/index.js';
 export default {
-
+    data : function(){
+        return{
+            id : '',
+            password : '',
+            name : ''
+        }
+    },
+    methods:{
+        send(){
+            const userData = {
+                id : this.id,
+                password : this.password,
+                name : this.name
+            };
+            checkInfo(userData);
+            console.log('send');
+        }
+    }
 }
 </script>
 
