@@ -7,9 +7,8 @@
         <li><router-link to='/history'>History</router-link></li>
         <li><router-link to='/schedule'>Schedule</router-link></li>
         <li><router-link to='/board'>Board</router-link></li>
-        <li>
-            <router-link to='/logIn'>Login</router-link>
-        </li>
+        <li><router-link to='/logIn'>Login</router-link></li>
+        <li><router-link to='/register'>SignUp</router-link></li>
         <div v-show="showBox" class="depth">
             <router-link to='/squad'>squad</router-link>
             <router-link to='/stats'>stats</router-link>

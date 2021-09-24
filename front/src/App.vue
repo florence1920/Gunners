@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <NavBar></NavBar>
-    <router-view></router-view>
+    <div class="routerWrap">
+      <router-view></router-view>
+    </div>
     <Footer></Footer>
   </div>
 </template>
@@ -22,6 +24,6 @@ export default ({
 <style>
 /* reset */
 *, a, div, p, ul, li, section, body {list-style: none; text-decoration: none; margin: 0; padding: 0; box-sizing: border-box;}
-
+.routerWrap {margin-top: 104px;}
 
 </style>
