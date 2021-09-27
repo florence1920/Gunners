@@ -15,16 +15,16 @@
                     <li><a href="">Stat</a></li>
                 </ul> 
             </li> -->
-            <li v-on:mouseover="doMouseOver" v-on:mouseleave="doMouseLeave">
+            <li v-on:mouseover="doMouseOver(0)" v-on:mouseleave="doMouseLeave(0)">
                 <router-link to='/team'>Team</router-link>
-                <ul v-show="showBox" class="depth">
+                <ul v-show="showBox[0].show" class="depth">
                     <li><a href="">Squad</a></li>
                     <li><a href="">Stat</a></li>
                 </ul> 
             </li>
-            <li v-on:mouseover="doMouseOver" v-on:mouseleave="doMouseLeave">
+            <li v-on:mouseover="doMouseOver(1)" v-on:mouseleave="doMouseLeave(1)">
                 <router-link to='/history'>History</router-link>
-                <ul v-show="showBox" class="depth">
+                <ul v-show="showBox[1].show" class="depth">
                     <li><a href="">Introduce</a></li>
                     <li><a href="">Achievement</a></li>
                     <li><a href="">Honor of Fame</a></li>
@@ -45,16 +45,20 @@
 export default {
     data : function(){
         return{
-            showBox : false,
-            message : 'hi',
+            showBox : [
+              {show : false}, { show : false}  
+            ],
         }
+    
     },
     methods: {
-        doMouseOver: function() {
-            this.showBox = true;
+        doMouseOver: function(index) {
+            console.log(index);
+            this.showBox[index].show = true;
         },
-        doMouseLeave : function(){
-            this.showBox = false;
+        doMouseLeave : function(index){
+            console.log(index);
+            this.showBox[index].show = false;
         }
     }
 
