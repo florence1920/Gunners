@@ -17,14 +17,14 @@
             </li> -->
             <li v-on:mouseover="doMouseOver(0)" v-on:mouseleave="doMouseLeave(0)">
                 <router-link to='/team'>Team</router-link>
-                <ul v-show="showBox[0].test" class="depth">
+                <ul v-show="showBox[0].show" class="depth">
                     <li><a href="">Squad</a></li>
                     <li><a href="">Stat</a></li>
                 </ul> 
             </li>
             <li v-on:mouseover="doMouseOver(1)" v-on:mouseleave="doMouseLeave(1)">
                 <router-link to='/history'>History</router-link>
-                <ul v-show="showBox[1].test" class="depth">
+                <ul v-show="showBox[1].show" class="depth">
                     <li><a href="">Introduce</a></li>
                     <li><a href="">Achievement</a></li>
                     <li><a href="">Honor of Fame</a></li>
@@ -46,7 +46,7 @@ export default {
     data : function(){
         return{
             showBox : [
-              {test : false}, { test : false}  
+              {show : false}, { show : false}  
             ],
         }
     
@@ -54,11 +54,11 @@ export default {
     methods: {
         doMouseOver: function(index) {
             console.log(index);
-            this.showBox[index].test = true;
+            this.showBox[index].show = true;
         },
         doMouseLeave : function(index){
             console.log(index);
-            this.showBox[index].test = false;
+            this.showBox[index].show = false;
         }
     }
 
