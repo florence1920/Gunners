@@ -1,4 +1,4 @@
-<template>
+ <template>
     <div class="contWrap">
         <div class="top">
             <p class="tit">Join Us</p>
@@ -27,7 +27,6 @@
                 <li><button type="submit" class="nextBtn">가입하기</button></li>
             </ul>
         </form>
-            
     </div>
 </template>
 
