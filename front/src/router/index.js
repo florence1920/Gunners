@@ -6,6 +6,7 @@ import HistoryView from '@/views/HistoryView.vue';
 import ScheduleView from '@/views/ScheduleView.vue';
 import BoardView from '@/views/BoardView.vue';
 import RegisterView from '@/views/RegisterView.vue';
+import LoginView from '@/views/LoginView.vue';
 
 Vue.use(VueRouter)
 
@@ -39,6 +40,11 @@ const routes = [
     path: '/register',
     name: 'Register',
     component: RegisterView
+  },
+  {
+    path: '/login',
+    name: 'Login',
+    component: LoginView
   },
 ]
 
