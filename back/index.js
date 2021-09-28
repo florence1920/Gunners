@@ -36,7 +36,5 @@ app.post('/register', (req,res)=>{
     })
 })
 
-app.get('/',(req,res)=>{
-    res.send('hello');
-})
+
 
