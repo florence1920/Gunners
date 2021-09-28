@@ -13,9 +13,9 @@
                     <p class="font sub">서울특별시 관악구 신림동 남부순환로 1599-3</p>
                 </li>
                 <li>
-                    <p class="font parti tit">Participants</p>
-                    <p class="font parti sub">이승헌(Seung-Heon Lee)</p>
-                    <p class="font parti sub">조윤호(Yoon-Ho Cho)</p>
+                    <p class="font tit">Participants</p>
+                    <p class="font sub">이승헌(Seung-Heon Lee)</p>
+                    <p class="font sub">조윤호(Yoon-Ho Cho)</p>
                 </li>
             </ul>
             <ul class="socialMedia">
