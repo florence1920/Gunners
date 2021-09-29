@@ -14,8 +14,8 @@
                 </li>
                 <li>
                     <p class="font tit">Participants</p>
-                    <p class="font sub">이승헌(Seung-Heon Lee)</p>
-                    <p class="font sub">조윤호(Yoon-Ho Cho)</p>
+                    <p class="font sub">이승헌(Developer)</p>
+                    <p class="font sub">조윤호(Publisher)</p>
                 </li>
             </ul>
             <ul class="socialMedia">
@@ -39,7 +39,7 @@ export default {
 </script>
 
 <style scoped>
-.footer {width: 100%; overflow: hidden; background: #000; padding: 40px 250px 25px; position: absolute;bottom: 0;}
+.footer {width: 100%; overflow: hidden; background: #000; padding: 40px 250px 25px;}
 .footer .menu {overflow: hidden; }
 .footer .menu > li {float: left; margin:0 40px 40px 0;}
 .footer .menu > li > a {color: #fff; font-weight: 600;}
