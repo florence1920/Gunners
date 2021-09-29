@@ -1,15 +1,20 @@
 <template>
     <div>
-        schedule View
-        <weather></weather>
+        <recent-match></recent-match>
+        <matches></matches>
+        <league-record></league-record>
     </div>
 </template>
 
 <script>
-import Weather from '../components/Weather.vue';
+import LeagueRecord from '../components/LeagueRecord.vue';
+import Matches from '../components/Matches.vue';
+import RecentMatch from '../components/RecentMatch.vue';
 export default {
     components:{
-        Weather
+        LeagueRecord,
+        RecentMatch,
+        Matches
     }
 }
 </script>
