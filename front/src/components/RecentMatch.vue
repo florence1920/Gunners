@@ -3,22 +3,24 @@
     <p>Next Match</p>
     <div class="contBox">
       <ul class="home">
-        홈팀
-        <li><img src="" alt="">홈팀 로고</li>        
-        <li>홈팀 이름</li>
+        <!-- 홈팀 -->
+        <li><img src="../assets/EPL_LOGO/Brighton.png" alt="" width="100px"></li>        
+        <li class="team"><p>Brighton</p></li>
       </ul>
       <ul class="matchInfo">
-        경기정보
+        <!-- 경기정보 -->
         <li>타이머</li>
         <ul>
-          <li>경기시간</li>
-          <li>이모티콘</li>
+          <li><p>American Express Community Stadium</p></li>
+          <li>
+            <img src="" alt="">날씨 이모티콘
+          </li>
         </ul>
       </ul>
       <ul class="away">
-        어웨이팀
-        <li><img src="" alt="">어웨이팀 로고</li>        
-        <li>어웨이팀 이름</li>
+        <!-- 어웨이팀 -->
+        <li><img src="../assets/EPL_LOGO/Arsenal.png" alt="" width="100px"></li>        
+        <li class="team">Arsenal</li>
       </ul>
     </div>
   </div>
@@ -32,9 +34,13 @@ export default {
 <style scoped>
   div {background: #eee;}
   div > p {font-size: 18px;}
+  .team {font-weight: 600; margin: 20px 0 0 0;}
   .contBox {overflow: hidden; background: #fff; text-align: center;}
-  .contBox > ul {float: left;}
+  .contBox > ul {float: left; padding: 30px 40px;}
   .contBox .home {width: 33.33%;}
   .contBox .matchInfo {width: 33.34%;}
+  .contBox .matchInfo > li {margin: 20px 0 80px 0;}
+  .contBox .matchInfo > ul {overflow: hidden; text-align: center;}
+  .contBox .matchInfo > ul > li {margin: 10px 0;}
   .contBox .away {width: 33.33%;}
 </style>
