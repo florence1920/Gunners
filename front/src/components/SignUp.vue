@@ -55,7 +55,7 @@ export default {
 </script>
 
 <style scoped>
-.contWrap {width: 1400px; padding-top: 50px; padding-bottom: 100px; margin: 0 auto;}
+.contWrap {width: 1400px;  background: #fff; padding-top: 50px; padding-bottom: 100px; margin: 0 auto;}
 .top {text-align: center;}
 .top .tit {font-size: 16px; color: #000;}
 .top .sub {font-size: 70px; color: #000;}

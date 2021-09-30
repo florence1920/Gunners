@@ -11,5 +11,5 @@ export default {
 </script>
 
 <style scoped>
- div {width: 30%; background: #333;}
+ div {background: #ddd;}
 </style>
