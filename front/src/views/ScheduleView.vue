@@ -23,6 +23,8 @@ export default {
 }
 </script>
     
-<style>
-
+<style scoped>
+    div {overflow: hidden;}
+    .matchWrap {float: left; width: 70%;}
+    .recordWrap {float: left; width: 30%;}
 </style>
