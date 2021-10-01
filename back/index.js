@@ -13,7 +13,8 @@ app.use(express.urlencoded({extended:true}));
 app.use(cors());
 
 //몽구스 DB 연결
-mongoose.connect('mongodb+srv://admin:admin@cluster0.snwm6.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+
+mongoose.connect('mongodb+srv://admin:admin@cluster0.471li.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
   .then(()=> { console.log('MongoDB Connected');})
   .catch(err => {console.log(err);})
 
@@ -22,7 +23,7 @@ app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })
 
-//회원가입 
+//회원
 app.post('/register', (req,res)=>{
     //회원 가입 할 때 필요한 정보를 client에서 가져옴
     //데이터 베이스에 투입 !
@@ -36,5 +37,15 @@ app.post('/register', (req,res)=>{
     })
 })
 
-
+app.get('/' ,async(req,res)=>{
+  try{
+    const user = await User.find();
+    console.log(user)    ;
+    res.json({
+      user
+    });
+  }catch(err){
+    res.status(500).json({message : err.message})
+  }
+})
 
