@@ -39,7 +39,7 @@ export default {
   .contBox > ul {float: left; padding: 30px 40px;}
   .contBox .home {width: 33.33%;}
   .contBox .matchInfo {width: 33.34%;}
-  .contBox .matchInfo > li {margin: 20px 0 80px 0;}
+  .contBox .matchInfo > li {margin: 20px 0 40px 0;}
   .contBox .matchInfo > ul {overflow: hidden; text-align: center;}
   .contBox .matchInfo > ul > li {margin: 10px 0;}
   .contBox .away {width: 33.33%;}
