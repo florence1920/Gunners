@@ -36,7 +36,7 @@ export default {
 
 <style scoped>
   div {background: #4E4949;}
-  div > p {font-size: 18px; color: #fff;}
+  div > p {font-size: 22px; color: #fff;}
   .team {font-weight: 600; margin: 20px 0 0 0;}
   .contBox {overflow: hidden; color: #fff; background: #4E4949; text-align: center;}
   .contBox > ul {float: left; padding: 30px 40px;}
