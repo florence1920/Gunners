@@ -6,59 +6,25 @@
             </div>
             <ul class="leagueInfo">
                 <li>
-                    <!-- 순위 -->
                     <p>Rank</p>
-                    <ul>
-                        <li><p>1</p></li>
-                        <li><p>2</p></li>
-                        <li><p>3</p></li>
-                        <li><p>4</p></li>
-                        <li><p>5</p></li>
-                    </ul>
-                </li>
-                <li>
-                    <!-- 팀 이름 -->
                     <p>Team</p>
-                    <ul class="team">
-                        <li><p><span><img src="../assets/epl_logo_small/LiverPool.png" alt="" width="22px"></span>LiverPool</p></li>
-                        <li><p><span><img src="../assets/epl_logo_small/ManCity.png" alt="" width="22px"></span>Manchester City</p></li>
-                        <li><p><span><img src="../assets/epl_logo_small/Chelsea.png" alt="" width="22px"></span>Chelsea</p></li>
-                        <li><p><span><img src="../assets/epl_logo_small/ManU.png" alt="" width="22px"></span>Manchester United</p></li>
-                        <li><p><span><img src="../assets/epl_logo_small/Everton.png" alt="" width="22px"></span>Everton</p></li>
-                    </ul>
-                    </li>
-                <li>
-                    <!-- 경기수 -->
                     <p>Pl.</p>
-                    <ul>
-                        <li><p>6</p></li>
-                        <li><p>6</p></li>
-                        <li><p>6</p></li>
-                        <li><p>6</p></li>
-                        <li><p>6</p></li>
-                    </ul>
-                </li>
-                <li>
-                    <!-- 골득실 -->
                     <p>Gd.</p>
-                    <ul>
-                        <li><p>11</p></li>
-                        <li><p>11</p></li>
-                        <li><p>10</p></li>
-                        <li><p>8</p></li>
-                        <li><p>5</p></li>
-                    </ul>
+                    <p>Pts.</p>
                 </li>
                 <li>
-                    <!-- 승점 -->
-                    <p>Pts.</p>
-                    <ul>
-                        <li><p>14</p></li>
-                        <li><p>13</p></li>
-                        <li><p>13</p></li>
-                        <li><p>13</p></li>
-                        <li><p>13</p></li>
-                    </ul>
+                    <p>1</p>
+                    <p>LiverPool</p>
+                    <p>6</p>
+                    <p>10</p>
+                    <p>18</p>
+                </li>
+                <li>
+                    <p>2</p>
+                    <p>ManCity</p>
+                    <p>6</p>
+                    <p>10</p>
+                    <p>18</p>
                 </li>
             </ul>
         </div>
@@ -72,13 +38,17 @@ export default {
 </script>
 
 <style scoped>
-div {background: #fff;}
+div {background: #aaa;}
 .contWrap {padding: 20px 30px;}
-.leagueName {font-size: 18px; font-weight: 600;}
+.contWrap .leagueInfo {margin-top: 30px;}
+.contWrap .leagueInfo  > li {overflow: hidden; margin-bottom: 10px;}
+.contWrap .leagueInfo  > li > p {float: left; font-size: 16px; margin: 0 50px 0 0;}
+
+/* .leagueName {font-size: 18px; font-weight: 600;}
 .contWrap .leagueInfo {overflow: hidden; margin: 30px 0;} 
 .contWrap .leagueInfo > li {float: left; margin: 20px 20px;}
 .contWrap .leagueInfo > li > p {font-size: 16px; font-weight: 600; color: #000;}
 .contWrap .leagueInfo > li > ul > li {margin: 10px 0;}
-.contWrap .leagueInfo > li > ul > li > p {font-size: 15px; font-weight: 400;}
+.contWrap .leagueInfo > li > ul > li > p {font-size: 15px; font-weight: 400;} */
 
 </style>
