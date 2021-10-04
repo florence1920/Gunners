@@ -9,7 +9,9 @@
       </ul>
       <ul class="matchInfo">
         <!-- 경기정보 -->
-        <li>타이머</li>
+        <li>
+          
+        </li>
         <ul>
           <li><p>American Express Community Stadium</p></li>
           <li>
@@ -28,6 +30,7 @@
 
 <script>
 export default {
+
 }
 </script>
 
