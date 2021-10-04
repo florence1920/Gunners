@@ -32,10 +32,10 @@ export default {
 </script>
 
 <style scoped>
-  div {background: #eee;}
-  div > p {font-size: 18px;}
+  div {background: #4E4949;}
+  div > p {font-size: 18px; color: #fff;}
   .team {font-weight: 600; margin: 20px 0 0 0;}
-  .contBox {overflow: hidden; background: #fff; text-align: center;}
+  .contBox {overflow: hidden; color: #fff; background: #4E4949; text-align: center;}
   .contBox > ul {float: left; padding: 30px 40px;}
   .contBox .home {width: 33.33%;}
   .contBox .matchInfo {width: 33.34%;}

@@ -73,7 +73,7 @@ export default {
 
 <style scoped>
 div {background: #ddd;}
-.contWrap {padding: 20px 20px;}
+.contWrap {padding: 20px 30px;}
 .leagueName {font-size: 18px; font-weight: 600;}
 .contWrap .leagueInfo {overflow: hidden; margin: 20px 0;} 
 .contWrap .leagueInfo > li {float: left; margin: 10px 20px;}
