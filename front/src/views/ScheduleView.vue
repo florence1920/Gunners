@@ -14,6 +14,8 @@
 import LeagueRecord from '@/components/LeagueRecord.vue';
 import Matches from '@/components/Matches.vue';
 import RecentMatch from '@/components/RecentMatch.vue';
+import $ from 'jquery';
+
 export default {
     components:{
         LeagueRecord,
@@ -30,13 +32,10 @@ export default {
         handleScroll () {
         const st = document.scrollingElement.scrollTop
         console.log(st)
-        const recordWrap = document.querySelector('.recordWrap');
-        if (st >= 500) {
-            //$('.cateBox').css({ position: 'fixed', top: '15px', right: 'calc((100% - 1160px) / 2)' })
-            recordWrap.style.display = 'none';
-        } else if (st < 500) {
-            //$('.cateBox').css({ position: 'absolute', top: '0', right: '0' })
-            recordWrap.style.display = 'block';
+        if (st >= 300) {
+            $('.recordWrap').css({ position: 'fixed', top: '15px', right: '0' })
+        } else if (st < 300) {
+            $('.recordWrap').css({ position: 'absolute', top: '209px', right: '0' })
         }
         }
     }
@@ -48,4 +47,5 @@ export default {
     div {overflow: hidden;}
     .matchWrap {float: left; width: 70%; padding: 0 10px;}
     .recordWrap {float: left; width: 30%;}
+    
 </style>

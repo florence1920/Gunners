@@ -2,9 +2,9 @@
 <ul class="matchesWrap">
   <li class="matchesDate">
     <ul>
-      <li><p>Month</p></li>
-      <li><p>Date</p></li>
-      <li><p>Year</p></li>
+      <li><p>October</p></li>
+      <li><p>18</p></li>
+      <li><p>2021</p></li>
     </ul>
   </li>
   <li class="matchesInfo">
@@ -13,7 +13,7 @@
       <li><img src="../assets/EPL_LOGO/Arsenal.png" alt="" width="50px"></li>
     </ul>
     <ul class="detail">
-      <li><p>Time</p></li>
+      <li><p>20 : 00</p></li>
       <li><p>Emirates Stadium</p></li>
     </ul>
     <ul class="team awayTeam">
@@ -29,7 +29,7 @@
 
 <script>
 export default {
-
+  
 }
 </script>
 
@@ -38,6 +38,7 @@ export default {
 .matchesWrap > li {float: left;}
 .matchesWrap .matchesDate {width: 20%; padding: 0 15px;}
 .matchesWrap .matchesDate > ul > li {margin: 10px 0;}
+.matchesWrap .matchesDate > ul > li > p {font-weight: 600;}
 .matchesWrap .matchesInfo {overflow: hidden; width: 60%; margin: 20px 0 0 0;}
 .matchesWrap .matchesInfo > ul {float: left; text-align: center;}
 .matchesWrap .matchesInfo .team {overflow: hidden; width: 30%; line-height: 62px;}
