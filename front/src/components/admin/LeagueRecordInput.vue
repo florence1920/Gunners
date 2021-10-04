@@ -3,7 +3,7 @@
       <form @submit.prevent="submitLeague">
           <team-list></team-list>
           <div>
-              Team <input type="text" v-model="team">
+              Team <input type="text" v-model="teamName">
               경기수 <input type="number" v-model="pl">
               골득실 <input type="number" v-model="gd">
               승점 <input type="number" v-model="pts">
@@ -20,16 +20,16 @@ export default {
   components: { TeamList },
   data : function(){
       return{
-          team :'',
-          pl: '',
-          gd: '',
-          pts: '',
+          teamName :'',
+          pl: 0,
+          gd: 0,
+          pts: 0,
       }
   },
   methods:{
       submitLeague (){
           const leagueData = {
-              team : this.team,
+              teamName : this.teamName,
               pl : this.pl,
               gd : this.gd,
               pts : this.pts
