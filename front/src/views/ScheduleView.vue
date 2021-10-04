@@ -25,6 +25,6 @@ export default {
     
 <style scoped>
     div {overflow: hidden;}
-    .matchWrap {float: left; width: 70%;}
+    .matchWrap {float: left; width: 70%; padding: 0 10px;}
     .recordWrap {float: left; width: 30%;}
 </style>

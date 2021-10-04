@@ -72,13 +72,13 @@ export default {
 </script>
 
 <style scoped>
-div {background: #ddd;}
+div {background: #fff;}
 .contWrap {padding: 20px 30px;}
 .leagueName {font-size: 18px; font-weight: 600;}
-.contWrap .leagueInfo {overflow: hidden; margin: 20px 0;} 
-.contWrap .leagueInfo > li {float: left; margin: 10px 20px;}
+.contWrap .leagueInfo {overflow: hidden; margin: 30px 0;} 
+.contWrap .leagueInfo > li {float: left; margin: 20px 20px;}
 .contWrap .leagueInfo > li > p {font-size: 16px; font-weight: 600; color: #000;}
 .contWrap .leagueInfo > li > ul > li {margin: 10px 0;}
-.contWrap .leagueInfo > li > ul > li > p {font-size: 15px;}
+.contWrap .leagueInfo > li > ul > li > p {font-size: 15px; font-weight: 400;}
 
 </style>
