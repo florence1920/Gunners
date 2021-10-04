@@ -12,9 +12,9 @@
                 <li><a href="">아이디 찾기</a></li>
                 <li><a href="">비밀번호 찾기</a></li>
             </ul>
-            <ul class="btnWrap">
+            <div class="btnWrap">
                 <button type="submit" class="loginBtn">로그인</button>
-            </ul>
+            </div>
         </div>
     </div>
 </template>
@@ -29,8 +29,7 @@ export default {
 .loginContWrap {width: 50%; background: #fff; margin: 0 auto; text-align: center; padding: 20px 0;}
 .loginContWrap > p {font-size: 60px; font-weight: 300; text-align: center; margin-bottom: 30px;}
 .logIn_input_Box input {width: 543px; height: 50px; font-size: 16px; color: #000; border: 0; border-bottom: 1px solid #dadada; padding: 0 10px; margin-bottom: 15px;}
-.loginContWrap .loginBox {text-align: center; position: relative;}
-.loginContWrap .loginBox {overflow: hidden; margin: 0 0 0 100px;}
+.loginContWrap .loginBox {text-align: center; position: relative; overflow: hidden; margin: 0 0 0 100px;}
 .loginContWrap .loginBox > li {float: left; margin: 0 10px;}
 .loginContWrap .loginBox > li:first-child {margin: 0 110px;}
 .loginContWrap .btnWrap {text-align: center; margin-top: 100px;}
