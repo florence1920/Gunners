@@ -7,6 +7,9 @@ import ScheduleView from '@/views/ScheduleView.vue';
 import BoardView from '@/views/BoardView.vue';
 import RegisterView from '@/views/RegisterView.vue';
 import LoginView from '@/views/LoginView.vue';
+import AdminView from '@/views/AdminView.vue';
+import League from '@/views/admin/League.vue';
+import Matches from '@/views/admin/Matches.vue'
 
 Vue.use(VueRouter)
 
@@ -45,6 +48,21 @@ const routes = [
     path: '/login',
     name: 'Login',
     component: LoginView
+  },
+  {
+    path: '/admin',
+    name: 'Admin',
+    component: AdminView
+  },
+  {
+    path: '/admin/league',
+    name: 'AdminLeague',
+    component: League
+  },
+  {
+    path: '/admin/matches',
+    name: 'AdminMatches',
+    component: Matches
   },
 ]
 

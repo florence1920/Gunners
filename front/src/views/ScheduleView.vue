@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="schedule">
         <div class="matchWrap">
             <recent-match></recent-match>
             <matches></matches>
@@ -19,11 +19,32 @@ export default {
         LeagueRecord,
         RecentMatch,
         Matches
+    },
+    created () {
+    window.addEventListener('scroll', this.handleScroll)
+    },
+    unmounted () {
+        window.removeEventListener('scroll', this.handleScroll)
+    },
+    methods: {
+        handleScroll () {
+        const st = document.scrollingElement.scrollTop
+        console.log(st)
+        const recordWrap = document.querySelector('.recordWrap');
+        if (st >= 500) {
+            //$('.cateBox').css({ position: 'fixed', top: '15px', right: 'calc((100% - 1160px) / 2)' })
+            recordWrap.style.display = 'none';
+        } else if (st < 500) {
+            //$('.cateBox').css({ position: 'absolute', top: '0', right: '0' })
+            recordWrap.style.display = 'block';
+        }
+        }
     }
 }
 </script>
     
 <style scoped>
+    .schedule {height: 2000px;}
     div {overflow: hidden;}
     .matchWrap {float: left; width: 70%; padding: 0 10px;}
     .recordWrap {float: left; width: 30%;}

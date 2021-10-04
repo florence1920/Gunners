@@ -49,3 +49,9 @@ app.get('/' ,async(req,res)=>{
   }
 })
 
+//admin
+
+app.post('/admin/league', (req,res)=>{
+  console.log(req.body);
+})
+
