@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrapAll">
       리그 수정
       <league-record-input></league-record-input>
   </div>

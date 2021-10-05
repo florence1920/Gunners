@@ -1,5 +1,7 @@
 <template>
-  <div>매치 수정하기</div>
+  <div class="wrapAll">
+    매치 수정하기
+  </div>
 </template>
 
 <script>

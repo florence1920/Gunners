@@ -1,5 +1,6 @@
 <template>
   <div>
+    <p class="tit">Next Match</p>
     <div class="matchWrap">
       <ul class="matchDate">
         <li><p>2021.Oct.18</p></li>
@@ -31,7 +32,7 @@ export default {
 </script>
 
 <style scoped>
-  .matchWrap {overflow: hidden; padding: 32px 40px; background: #002d72;}
+  .matchWrap {overflow: hidden; padding: 32px 40px; background: #002d72; margin: 0 0 40px;}
   .matchWrap ul {float: left;}
   .matchWrap .matchDate {width: 25%;}
   .matchWrap .matchDate li {width: 202.28px; padding: 19px 5px; border-bottom: 1px solid rgba(255,255,255,.2);}

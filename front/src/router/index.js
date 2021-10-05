@@ -13,12 +13,7 @@ import Matches from '@/views/admin/Matches.vue'
 
 Vue.use(VueRouter)
 
-const routes = [
-  {
-    path: '/',
-    name: 'Main',
-    component: MainView
-  },
+const routes = [  
   {
     path: '/team',
     name: 'Team',
@@ -26,7 +21,7 @@ const routes = [
   },
   {
     path: '/history',
-    name: 'History',
+    name: 'Histxory',
     component: HistoryView
   },
   {
@@ -63,6 +58,11 @@ const routes = [
     path: '/admin/matches',
     name: 'AdminMatches',
     component: Matches
+  },
+  {
+    path: '/',
+    name: 'Main',
+    component: MainView
   },
 ]
 

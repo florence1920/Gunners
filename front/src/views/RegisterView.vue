@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="wrapAll">
         <sign-up></sign-up>
     </div>
 </template>

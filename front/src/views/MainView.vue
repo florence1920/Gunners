@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="wrapAll">
         MainView
         <p>아이디 {{test.data.user[0].id}}</p>
         <p>비번 {{test.data.user[0].password}}</p>
@@ -12,10 +12,10 @@ import {getMember} from '@/api/test.js'
 export default {
     created(){
         getMember()
-       .then(response =>{
-         console.log(response);
-         this.test = response;
-      })
+        .then(response =>{
+            console.log(response);
+            this.test = response;
+        })
     },
     data(){
         return {

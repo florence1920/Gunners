@@ -1,39 +1,8 @@
 <template>
     <div class="nav">
-        <div class="logoWrap">
-            <a class="logo">
-                <router-link to='/'>
-                    <img src="../assets/arsenal_logo.png" alt="" width="100px">
-                </router-link>
-            </a>
-        </div>
-        <ul class="menu">
-            <!-- <li v-on:mouseover="doMouseOver" v-on:mouseleave="doMouseLeave">
-                <router-link to='/team' >Team</router-link>
-                <ul v-show="showBox" class="depth">
-                    <li><a href="">Squad</a></li>
-                    <li><a href="">Stat</a></li>
-                </ul> 
-            </li> -->
-            <li v-on:mouseover="doMouseOver(0)" v-on:mouseleave="doMouseLeave(0)">
-                <router-link to='/team'>Team</router-link>
-                <ul v-show="showBox[0].show" class="depth">
-                    <li><a href="">Squad</a></li>
-                    <li><a href="">Stat</a></li>
-                </ul> 
-            </li>
-            <li v-on:mouseover="doMouseOver(1)" v-on:mouseleave="doMouseLeave(1)">
-                <router-link to='/history'>History</router-link>
-                <ul v-show="showBox[1].show" class="depth">
-                    <li><a href="">Introduce</a></li>
-                    <li><a href="">Achievement</a></li>
-                    <li><a href="">Honor of Fame</a></li>
-                </ul>
-            </li>
-            <li><router-link to='/schedule'>Schedule</router-link></li>
-            <li><router-link to='/board'>Board</router-link></li>
-            <li><router-link to='/admin'>Admin</router-link></li>
-        </ul>
+        <router-link to='/'>
+        <div class="logo"></div>
+        </router-link>
         <ul class="memberCont">
             <li><router-link to='/logIn'>
                 <img src="../assets/logIn.png" alt="" width="29px">
@@ -42,6 +11,33 @@
                 <img src="../assets/signUp.png" alt="" width="27px">
             </router-link></li>
         </ul>
+        <ul class="menu">
+            <!-- <li v-on:mouseover="doMouseOver" v-on:mouseleave="doMouseLeave">
+                <router-link to='/team' >Team</router-link>
+                <ul v-show="showBox" class="depth">
+                    <li><router-link to=''>Squad</router-link></li>
+                    <li><router-link to=''>Stat</router-link></li>
+                </ul> 
+            </li> -->
+            <li v-on:mouseover="doMouseOver(0)" v-on:mouseleave="doMouseLeave(0)">
+                <router-link to='/team'>Team</router-link>
+                <ul v-show="showBox[0].show" class="depth">
+                    <li><router-link to=''>Squad</router-link></li>
+                    <li><router-link to=''>Stat</router-link></li>
+                </ul> 
+            </li>
+            <li v-on:mouseover="doMouseOver(1)" v-on:mouseleave="doMouseLeave(1)">
+                <router-link to='/history'>History</router-link>
+                <ul v-show="showBox[1].show" class="depth">
+                    <li><router-link to=''>Introduce</router-link></li>
+                    <li><router-link to='/achievement'>Achievement</router-link></li>
+                    <li><router-link to=''>Honor of Fame</router-link></li>
+                </ul>
+            </li>
+            <li><router-link to='/schedule'>Schedule</router-link></li>
+            <li><router-link to='/board'>Board</router-link></li>
+            <li><router-link to='/admin'>Admin</router-link></li>
+        </ul>        
     </div>
     
 </template>
@@ -71,15 +67,15 @@ export default {
 </script>
 
 <style scoped>
-    .nav {background: #fff; border-bottom: 1px solid #dadada; position: relative; margin: 0 auto;}
-    a {color: #000; font-size: 17px; font-weight: 600;}
-    .logoWrap {position: relative;top:0;left: 100px; display: inline-block;}
-    .menu {position: absolute;top: 70px;left: 40%;}
-    .menu > li {float: left; margin: 0 30px; position: relative;}
-    .menu > li > a {float:left;}
-    .depth {width:220px; padding: 20px 20px; font-size:15px; background: #fff; position: absolute; top:30px;left: 50%; transform: translateX(-50%);}
-    .depth > li {text-align: center; }
-    .memberCont {position: absolute;top: 70px;right: 20%; overflow: hidden;}
-    .memberCont > li {float: left; margin: 0 20px;}
+    .nav {width: 100%; height: 100px; background: #fff; border-bottom: 1px solid #dadada; padding: 12.5px 40px 0;}
+    .nav .logo {float: left; width: 75px; height: 75px; background: url(../assets/arsenal_logo.png)no-repeat center; background-size: 100% auto;}
+    .nav .menu {float: right; padding: 27px 0 0;}
+    .nav .menu > li {float: left; text-align: center; padding: 0 0 20px; margin: 0 30px 0 0; position: relative; z-index: 999;}
+    .nav .menu > li a {color:#000; font-weight: 600;}
+    .nav .menu > li .depth {min-width: 180px; background: #fff; border: 1px solid #dadada; padding: 18px 20px 20px; position: absolute;top: 35px;left: 50%; transform: translateX(-50%);}
+    .nav .menu > li .depth > li {margin: 0 0 10px;}
+    .nav .menu > li .depth > li:last-child {margin: 0;}
+    .nav .memberCont {float: right; overflow: hidden; margin: 22.75px 0 0;}
+    .nav .memberCont > li {float: left; margin: 0 0 0 20px;}
 
 </style>
