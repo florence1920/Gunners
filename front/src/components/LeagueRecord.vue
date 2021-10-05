@@ -24,17 +24,36 @@
 </template>
 
 <script>
-export default {
-    
 
+import $ from 'jquery';
+
+
+export default {
+    created () {
+    window.addEventListener('scroll', this.handleScroll)
+    },
+    unmounted () {
+        window.removeEventListener('scroll', this.handleScroll)
+    },
+    methods: {
+        handleScroll () {
+        const st = document.scrollingElement.scrollTop
+        console.log(st)
+        if (st >= 140) {
+            $('.listWrap').css({ position: 'fixed', top: '15px', right: '40px' })
+        } else if (st < 140) {
+            $('.listWrap').css({ position: 'absolute', top: '40px', right: '40px' })
+        }
+        }
+    }
 }
 </script>
 
 <style scoped>
-.listWrap .tit {font-size: 18px; font-weight: 600; margin: 0 0 30px 0;}
+.listWrap  {width: calc(30% - 60px); position: absolute;top: 40px;right: 40px;}
 
-.listWrap .leagueTable {width: 375px; background: #fff;}
-.listWrap .leagueTable .head {overflow: hidden;  border-bottom: 1px solid #000; margin: 0 15px 28px;}
+.listWrap .leagueTable {background: #fff; border: 1px solid rgba(0, 0, 0, .1);}
+.listWrap .leagueTable .head {overflow: hidden; border-bottom: 1px solid #000; margin: 0 15px 28px;}
 .listWrap .leagueTable .head li {float: left; width: 15%; padding: 19px 0;}
 .listWrap .leagueTable .head .clubName {width: 40%;}
 .listWrap .leagueTable .head .clubName p {text-align: left;}

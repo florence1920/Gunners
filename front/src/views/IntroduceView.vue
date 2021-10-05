@@ -1,13 +1,11 @@
 <template>
-    <div>
-        TeamView
+    <div class="wrapAll">
+        Introduce Team
     </div>
 </template>
 
 <script>
-export default {
 
-}
 </script>
 
 <style>

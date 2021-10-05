@@ -1,13 +1,11 @@
 <template>
-    <div>
-        introduce
+    <div class="wrapAll">
+        Achievement
     </div>
 </template>
 
 <script>
-export default {
 
-}
 </script>
 
 <style>

@@ -1,13 +1,11 @@
 <template>
-    <div>
-        History View
+    <div class="wrapAll">
+        Honor of Fame
     </div>
 </template>
 
 <script>
-export default {
 
-}
 </script>
 
 <style>

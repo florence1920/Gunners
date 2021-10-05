@@ -1,13 +1,11 @@
 <template>
     <div class="wrapAll">
-        BoardView
+        Formation
     </div>
 </template>
 
 <script>
-export default {
 
-}
 </script>
 
 <style>
