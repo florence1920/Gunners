@@ -1,7 +1,9 @@
 <template>
     <div class="schedule">
         <div class="matchWrap">
+            <p class="tit">Next Match</p>
             <recent-match></recent-match>
+            <p class="tit">Fixture</p>
             <matches></matches>
         </div>
         <div class="recordWrap">
@@ -44,8 +46,9 @@ export default {
     
 <style scoped>
     .schedule {height: 2000px;}
+    .schedule .tit {font-size: 22px; font-weight: 600; color: #000; border-radius: 3px; margin: 30px;}
     div {overflow: hidden;}
-    .matchWrap {float: left; width: 70%; padding: 0 10px;}
+    .matchWrap {float: left; width: 70%;}
     .recordWrap {float: left; width: 30%;}
     
 </style>
