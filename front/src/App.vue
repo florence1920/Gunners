@@ -26,5 +26,5 @@ export default ({
 *, a, div, p, ul, li, section, body {list-style: none; text-decoration: none; margin: 0; padding: 0; box-sizing: border-box;}
 .routerWrap {padding: 0 40px; margin-top: 104px;}
 
-body {background: #aaa;}
+body {background: #fafafa;}
 </style>

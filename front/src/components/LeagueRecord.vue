@@ -1,68 +1,33 @@
 <template>
-    <div>
-        <div class="contWrap">
-            <div class="leagueName">
-                <p>Premier League</p>
-            </div>
-            <ul class="leagueInfo">
-                <li>
-                    <!-- 순위 -->
-                    <p>Rank</p>
-                    <ul>
-                        <li><p>1</p></li>
-                        <li><p>2</p></li>
-                        <li><p>3</p></li>
-                        <li><p>4</p></li>
-                        <li><p>5</p></li>
-                    </ul>
-                </li>
-                <li>
-                    <!-- 팀 이름 -->
-                    <p>Team</p>
-                    <ul class="team">
-                        <li><p><span><img src="../assets/epl_logo_small/LiverPool.png" alt="" width="22px"></span>LiverPool</p></li>
-                        <li><p><span><img src="../assets/epl_logo_small/ManCity.png" alt="" width="22px"></span>Manchester City</p></li>
-                        <li><p><span><img src="../assets/epl_logo_small/Chelsea.png" alt="" width="22px"></span>Chelsea</p></li>
-                        <li><p><span><img src="../assets/epl_logo_small/ManU.png" alt="" width="22px"></span>Manchester United</p></li>
-                        <li><p><span><img src="../assets/epl_logo_small/Everton.png" alt="" width="22px"></span>Everton</p></li>
-                    </ul>
-                    </li>
-                <li>
-                    <!-- 경기수 -->
-                    <p>Pl.</p>
-                    <ul>
-                        <li><p>6</p></li>
-                        <li><p>6</p></li>
-                        <li><p>6</p></li>
-                        <li><p>6</p></li>
-                        <li><p>6</p></li>
-                    </ul>
-                </li>
-                <li>
-                    <!-- 골득실 -->
-                    <p>Gd.</p>
-                    <ul>
-                        <li><p>11</p></li>
-                        <li><p>11</p></li>
-                        <li><p>10</p></li>
-                        <li><p>8</p></li>
-                        <li><p>5</p></li>
-                    </ul>
-                </li>
-                <li>
-                    <!-- 승점 -->
-                    <p>Pts.</p>
-                    <ul>
-                        <li><p>14</p></li>
-                        <li><p>13</p></li>
-                        <li><p>13</p></li>
-                        <li><p>13</p></li>
-                        <li><p>13</p></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+<div class="listWrap">
+    <p class="tit">Premier League</p>
+    <div class="leagueTable">
+        <ul class="head">
+            <li><p>Rank</p></li>
+            <li class="clubName"><p>Team</p></li>
+            <li><p>Pl.</p></li>
+            <li><p>Gd.</p></li>
+            <li><p>Pts.</p></li>
+        </ul>
+        <div class="divide"></div>
+        <ul class="list">
+            <li>
+                <p class="rank">1</p>
+                <p class="team">Chelsea</p>
+                <p>7</p>
+                <p>12</p>
+                <p>16</p>
+            </li>
+            <li>
+                <p class="rank">2</p>
+                <p class="team">LiverPool</p>
+                <p>7</p>
+                <p>11</p>
+                <p>15</p>
+            </li>
+        </ul>
     </div>
+</div>
 </template>
 
 <script>
@@ -72,13 +37,17 @@ export default {
 </script>
 
 <style scoped>
-div {background: #ddd;}
-.contWrap {padding: 20px 30px;}
-.leagueName {font-size: 18px; font-weight: 600;}
-.contWrap .leagueInfo {overflow: hidden; margin: 20px 0;} 
-.contWrap .leagueInfo > li {float: left; margin: 10px 20px;}
-.contWrap .leagueInfo > li > p {font-size: 16px; font-weight: 600; color: #000;}
-.contWrap .leagueInfo > li > ul > li {margin: 10px 0;}
-.contWrap .leagueInfo > li > ul > li > p {font-size: 15px;}
+.listWrap .tit {font-size: 18px; font-weight: 600; margin: 0 0 30px 0;}
+
+.listWrap .leagueTable {width: 375px; background: #fff;}
+.listWrap .leagueTable .head {overflow: hidden;  border-bottom: 1px solid #000; margin: 0 15px 28px;}
+.listWrap .leagueTable .head li {float: left; width: 15%; padding: 19px 0;}
+.listWrap .leagueTable .head .clubName {width: 40%;}
+.listWrap .leagueTable .head .clubName p {text-align: left;}
+.listWrap .leagueTable .head li p {font-size: 16px; font-weight: 600; text-align: center;}
+
+.listWrap .leagueTable .list li {overflow: hidden; margin: 0 15px 15px;}
+.listWrap .leagueTable .list li p {float: left; width: 15%; font-size: 16px; font-weight: 600; text-align: center;}
+.listWrap .leagueTable .list .team {width: 40%; text-align: left;}
 
 </style>

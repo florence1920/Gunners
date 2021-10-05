@@ -1,26 +1,24 @@
 <template>
   <div>
-    <p>Next Match</p>
-    <div class="contBox">
-      <ul class="home">
-        <!-- 홈팀 -->
-        <li><img src="../assets/EPL_LOGO/Brighton.png" alt="" width="100px"></li>        
-        <li class="team"><p>Brighton</p></li>
+    <div class="matchWrap">
+      <ul class="matchDate">
+        <li><p>2021.Oct.18</p></li>
+        <li><p>20:00</p></li>
+        <li><p>Emirates Stadium</p></li>
       </ul>
-      <ul class="matchInfo">
-        <!-- 경기정보 -->
-        <li>타이머</li>
-        <ul>
-          <li><p>American Express Community Stadium</p></li>
-          <li>
-            <img src="" alt="">날씨 이모티콘
-          </li>
-        </ul>
-      </ul>
-      <ul class="away">
-        <!-- 어웨이팀 -->
-        <li><img src="../assets/EPL_LOGO/Arsenal.png" alt="" width="100px"></li>        
-        <li class="team">Arsenal</li>
+      <ul class="match">
+        <li class="team homeTeam">
+          <img src="../assets/EPL_LOGO/Arsenal.png" alt="" width="100px">
+          <p>Arsenal</p>
+        </li>
+        <div class="matchDetail">
+          <p>Premier League</p>
+          <div class="matchTimer"></div>
+        </div>
+        <li class="team awayTeam">
+          <img src="../assets/EPL_LOGO/CrystalPalace.png" alt="" width="100px">
+          <p>Crystal Palace</p>
+        </li>
       </ul>
     </div>
   </div>
@@ -28,19 +26,24 @@
 
 <script>
 export default {
+
 }
 </script>
 
 <style scoped>
-  div {background: #4E4949;}
-  div > p {font-size: 18px; color: #fff;}
-  .team {font-weight: 600; margin: 20px 0 0 0;}
-  .contBox {overflow: hidden; color: #fff; background: #4E4949; text-align: center;}
-  .contBox > ul {float: left; padding: 30px 40px;}
-  .contBox .home {width: 33.33%;}
-  .contBox .matchInfo {width: 33.34%;}
-  .contBox .matchInfo > li {margin: 20px 0 80px 0;}
-  .contBox .matchInfo > ul {overflow: hidden; text-align: center;}
-  .contBox .matchInfo > ul > li {margin: 10px 0;}
-  .contBox .away {width: 33.33%;}
+  .matchWrap {overflow: hidden; padding: 32px 40px; background: #002d72;}
+  .matchWrap ul {float: left;}
+  .matchWrap .matchDate {width: 25%;}
+  .matchWrap .matchDate li {width: 202.28px; padding: 19px 5px; border-bottom: 1px solid rgba(255,255,255,.2);}
+  .matchWrap .matchDate li p {color: #fff; font-size: 18px; font-weight: 600;}
+
+  .matchWrap .match {overflow: hidden; width: 75%;}
+  .matchWrap .match .team {float: left; margin: 20px 40px 0; text-align: center;}
+  .matchWrap .match .team > p {color: #fff; font-size: 20px; margin-top: 20px;}
+
+  .matchWrap .match .matchDetail {float: left; margin: 30px 0;}
+  .matchWrap .match .matchDetail p {color: #fff; text-align: center;}
+  .matchWrap .match .matchDetail .matchTimer {width: 304.8px; height: 67px; background: #fff; margin: 30px 20px 20px;}
+
+
 </style>
