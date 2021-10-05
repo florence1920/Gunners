@@ -11,19 +11,12 @@
         </ul>
         <div class="divide"></div>
         <ul class="list">
-            <li>
-                <p class="rank">1</p>
-                <p class="team">Chelsea</p>
-                <p>7</p>
-                <p>12</p>
-                <p>16</p>
-            </li>
-            <li>
-                <p class="rank">2</p>
-                <p class="team">LiverPool</p>
-                <p>7</p>
-                <p>11</p>
-                <p>15</p>
+            <li v-for="(team, index) in this.$store.state.teams" v-bind:key="team.teamName">
+                <p class="rank">{{index+1}}</p>
+                <p class="team">{{team.teamName}}</p>
+                <p>{{team.pl}}</p>
+                <p>{{team.gd}}</p>
+                <p>{{team.pts}}</p>
             </li>
         </ul>
     </div>
@@ -31,7 +24,9 @@
 </template>
 
 <script>
+
 import $ from 'jquery';
+
 
 export default {
     created () {

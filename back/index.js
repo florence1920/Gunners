@@ -4,6 +4,7 @@ const port = 3000;
 import cors from 'cors';
 import mongoose from 'mongoose';
 import User from './models/User.js'
+import League from './models/League.js'
 
 //application/json 타입 읽을 수 있도록
 app.use(express.json());
@@ -50,8 +51,26 @@ app.get('/' ,async(req,res)=>{
 })
 
 //admin
-
+//league
 app.post('/admin/league', (req,res)=>{
-  console.log(req.body);
+  const league = new League(req.body);
+  league.save((err)=>{
+    if(err) return res.json({success:false,err});
+    return res.status(200).json({
+      success:true
+    })
+  })
+})
+
+app.get('/admin/league' ,async(req,res)=>{
+  try{
+    const league = await League.find({});
+    console.log(league);
+    res.json({
+      league
+    });
+  }catch(err){
+    res.status(500).json({message : err.message})
+  }
 })
 
