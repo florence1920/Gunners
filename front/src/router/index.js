@@ -1,8 +1,11 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import MainView from '@/views/MainView.vue';
-import TeamView from '@/views/TeamView.vue';
-import HistoryView from '@/views/HistoryView.vue';
+import FormationView from '@/views/FormationView.vue';
+import PlayerView from '@/views/PlayerView.vue';
+import IntroduceView from '@/views/IntroduceView.vue';
+import AchievementView from '@/views/AchievementView.vue';
+import HonorView from '@/views/HonorView.vue';
 import ScheduleView from '@/views/ScheduleView.vue';
 import BoardView from '@/views/BoardView.vue';
 import RegisterView from '@/views/RegisterView.vue';
@@ -15,14 +18,29 @@ Vue.use(VueRouter)
 
 const routes = [  
   {
-    path: '/team',
-    name: 'Team',
-    component: TeamView
+    path: '/formation',
+    name: 'Formation',
+    component: FormationView
   },
   {
-    path: '/history',
-    name: 'Histxory',
-    component: HistoryView
+    path: '/player',
+    name: 'Player',
+    component: PlayerView
+  },
+  {
+    path: '/introduce',
+    name: 'Introduce',
+    component: IntroduceView
+  },
+  {
+    path: '/achievement',
+    name: 'Achievement',
+    component: AchievementView
+  },
+  {
+    path: '/honor',
+    name: 'Honor',
+    component: HonorView
   },
   {
     path: '/schedule',
