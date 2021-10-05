@@ -5,6 +5,7 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import User from './models/User.js'
 import League from './models/League.js'
+import Match from './models/Match.js'
 
 //application/json 타입 읽을 수 있도록
 app.use(express.json());
@@ -74,3 +75,13 @@ app.get('/admin/league' ,async(req,res)=>{
   }
 })
 
+//matches
+app.post('/admin/matches', (req,res)=>{
+  const match = new Match(req.body);
+  match.save((err)=>{
+    if(err) return res.json({success:false,err});
+    return res.status(200).json({
+      success:true
+    })
+  })
+})

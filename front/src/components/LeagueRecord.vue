@@ -30,7 +30,8 @@ import $ from 'jquery';
 
 export default {
     created () {
-    window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('scroll', this.handleScroll),
+    this.$store.dispatch('GET_TEAMLIST');
     },
     unmounted () {
         window.removeEventListener('scroll', this.handleScroll)
