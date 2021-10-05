@@ -20,18 +20,18 @@
                 </ul> 
             </li> -->
             <li v-on:mouseover="doMouseOver(0)" v-on:mouseleave="doMouseLeave(0)">
-                <router-link to='/team'>Team</router-link>
+                <a class="block">Squad</a>
                 <ul v-show="showBox[0].show" class="depth">
-                    <li><router-link to=''>Squad</router-link></li>
-                    <li><router-link to=''>Stat</router-link></li>
+                    <li><router-link to='/formation'>Formation</router-link></li>
+                    <li><router-link to='/player'>Player</router-link></li>
                 </ul> 
             </li>
             <li v-on:mouseover="doMouseOver(1)" v-on:mouseleave="doMouseLeave(1)">
-                <router-link to='/history'>History</router-link>
+                <a class="block">History</a>
                 <ul v-show="showBox[1].show" class="depth">
-                    <li><router-link to=''>Introduce</router-link></li>
+                    <li><router-link to='/introduce'>Introduce</router-link></li>
                     <li><router-link to='/achievement'>Achievement</router-link></li>
-                    <li><router-link to=''>Honor of Fame</router-link></li>
+                    <li><router-link to='/honor'>Honor of Fame</router-link></li>
                 </ul>
             </li>
             <li><router-link to='/schedule'>Schedule</router-link></li>
@@ -72,6 +72,7 @@ export default {
     .nav .menu {float: right; padding: 27px 0 0;}
     .nav .menu > li {float: left; text-align: center; padding: 0 0 20px; margin: 0 30px 0 0; position: relative; z-index: 999;}
     .nav .menu > li a {color:#000; font-weight: 600;}
+    .nav .menu > li a.block {cursor: default;}
     .nav .menu > li .depth {min-width: 180px; background: #fff; border: 1px solid #dadada; padding: 18px 20px 20px; position: absolute;top: 35px;left: 50%; transform: translateX(-50%);}
     .nav .menu > li .depth > li {margin: 0 0 10px;}
     .nav .menu > li .depth > li:last-child {margin: 0;}

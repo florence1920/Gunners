@@ -1,15 +1,13 @@
 <template>
-    <div>
-        Achievement
+    <div class="wrapAll">
+        Introduce Team
     </div>
 </template>
 
 <script>
-export default {
 
-}
 </script>
 
-<style scoped>
+<style>
 
 </style>

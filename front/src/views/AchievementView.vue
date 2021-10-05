@@ -1,13 +1,11 @@
 <template>
     <div class="wrapAll">
-        TeamView
+        Achievement
     </div>
 </template>
 
 <script>
-export default {
 
-}
 </script>
 
 <style>

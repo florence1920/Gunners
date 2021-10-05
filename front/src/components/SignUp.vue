@@ -1,32 +1,27 @@
- <template>
-    <div class="contWrap">
-        <div class="top">
-            <p class="tit">Join Us</p>
-            <p class="sub">회원가입</p>
-        </div>
-        <form  v-on:submit.prevent="send">
-            <div class="personal_info">
-                <p>기본정보</p>
-                <ul class="personal">
-                    <li>
-                        <span>아이디</span>
-                        <input type="text" name="id" placeholder="영문 소문자/숫자 4-20자" v-model="id">
-                    </li>
-                    <li>
-                        <span>비밀번호</span>
-                        <input type="text" name="password" placeholder="영문/숫자/특수문자 조합 8-16자" v-model="password">
-                    </li>
-                    <li>
-                        <span>이름</span>
-                        <input type="text" name="name" v-model="name">
-                    </li>
-                </ul>
-            </div>
-            <ul class="btnWrap">
-                <li><button type="button" class="previewBtn">이전단계</button></li>
-                <li><button type="submit" class="nextBtn">가입하기</button></li>
+<template>
+    <div class="wrapAll">
+        <p class="head">SIGNUP</p>
+
+        <form  v-on:submit.prevent="send" action="">
+        <div class="personal_info">
+            <ul class="personal">
+                <li>
+                    <p>ID</p>
+                    <input type="text" name="id" placeholder="영문 소문자/숫자 4-20자" v-model="id">
+                </li>
+                <li>
+                    <p>PASSWORD</p>
+                    <input type="text" name="password" placeholder="영문/숫자/특수문자 조합 8-16자" v-model="password">
+                </li>
+                <li>
+                    <p>NAME</p>
+                    <input type="text" name="name" v-model="name">
+                </li>
             </ul>
+            <input type="submit" value="SIGNUP" class="btn"/>
+        </div>
         </form>
+        
     </div>
 </template>
 
@@ -55,20 +50,12 @@ export default {
 </script>
 
 <style scoped>
-.contWrap {width: 1400px;  background: #fff; padding-top: 50px; padding-bottom: 100px; margin: 0 auto;}
-.top {text-align: center;}
-.top .tit {font-size: 16px; color: #000;}
-.top .sub {font-size: 70px; color: #000;}
-
-.personal_info p {font-size: 18px; font-weight: normal; color: #222222; padding: 0 0 10px 0;}
-.personal {border-top: 2px solid #000; margin: 10px 0;}
-.personal li {margin: 20px;}
-.personal span {display: inline-block; width: 100px; font-size: 17px; font-weight: normal; color: #464646; margin: 0 50px;}
-.personal input {width: 465px; height: 50px; font-size: 16px; line-height: 50px; padding: 0 15px; border: solid 1px #e3e3e3; margin-right: 5px;}
-
-.btnWrap {border-top: 1px solid #e3e3e3; text-align: center; margin-top: 100px;}
-.btnWrap li {display: inline-block; margin: 35px 0 0 5px;}
-.btnWrap li .previewBtn {width: 271px; height: 67px; color: #000; font-size: 15px; font-weight: 600; background: #fff; border: solid 2px #000000;}
-.btnWrap li .nextBtn {width: 271px; height: 67px; color: #fff; font-size: 15px; font-weight: 600; background: #000; border: solid 2px #000000;}
-    
+.personal_info {width: 500px; margin: 0 auto;}
+.personal_info .btn {display: block; width: 100%; height: 55px; background: #464646; border: 0; color:#fff; font-size:16px; font-weight: 600; cursor: pointer; transition: .3s; margin: 40px auto 0;}
+.personal_info .btn:hover {background: #111;}
+.personal li {overflow: hidden; margin: 0 0 5px;}
+.personal li p {float: left; width: 25%; line-height: 51px; font-size: 15px; font-weight: 600; color: #464646;}
+.personal li input {float: left; width: 75%; border: 0; border-bottom: 1px solid rgba(0,0,0,.2); line-height: 50px; text-indent: 15px; font-size: 15px; transition: .3s;}
+.personal li input:hover {border-bottom: 1px solid rgba(0,0,0,1);}
+.personal li input:focus {border-bottom: 1px solid rgba(0,0,0,1);}
 </style>
