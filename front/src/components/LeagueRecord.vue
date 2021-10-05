@@ -37,9 +37,9 @@ export default {
 </script>
 
 <style scoped>
-.listWrap .tit {font-size: 18px; font-weight: 600; margin: 0 0 30px 0;}
+.listWrap .tit {font-size: 22px; font-weight: 600; color: #000; margin: 0 20px 30px 30px;}
 
-.listWrap .leagueTable {width: 375px; background: #fff;}
+.listWrap .leagueTable {width: 375px; background: #fff; margin: 0 10px;}
 .listWrap .leagueTable .head {overflow: hidden;  border-bottom: 1px solid #000; margin: 0 15px 28px;}
 .listWrap .leagueTable .head li {float: left; width: 15%; padding: 19px 0;}
 .listWrap .leagueTable .head .clubName {width: 40%;}

@@ -46,7 +46,7 @@ export default {
     
 <style scoped>
     .schedule {height: 2000px;}
-    .schedule .tit {font-size: 22px; font-weight: 600; color: #000; border-radius: 3px; margin: 30px;}
+    .schedule .tit {font-size: 22px; font-weight: 600; color: #000; border-radius: 3px; margin: 30px 0;}
     div {overflow: hidden;}
     .matchWrap {float: left; width: 70%;}
     .recordWrap {float: left; width: 30%;}

@@ -37,7 +37,7 @@ export default {
 
 <style scoped>
 
-.matchesWrap {overflow: hidden; background: #aaa; padding: 25px 0 25px 25px; margin: 20px 0;} 
+.matchesWrap {overflow: hidden; background: #fff; padding: 25px 0 25px 25px; margin: 20px 0;} 
 .matchesWrap > li {float: left;}
 
 .matchesWrap .matchesDate {width: 20%; padding: 0 15px;}
