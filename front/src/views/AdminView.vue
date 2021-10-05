@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="wrapAll">
       <div class="aWrap">
         <router-link to="/admin/league">리그 수정하기</router-link>
       </div>

@@ -1,5 +1,6 @@
 <template>
 <div>
+  <p class="tit">Fixture</p>
   <ul class="matchesWrap">
     <li class="matchesDate">
       <ul>
@@ -36,8 +37,7 @@ export default {
 </script>
 
 <style scoped>
-
-.matchesWrap {overflow: hidden; background: #fff; padding: 25px 0 25px 25px; margin: 20px 0;} 
+.matchesWrap {overflow: hidden; background: #fff; border: 1px solid rgba(0, 0, 0, .1); padding: 25px 0 25px 25px; margin: 0 0 40px;} 
 .matchesWrap > li {float: left;}
 
 .matchesWrap .matchesDate {width: 20%; padding: 0 15px;}

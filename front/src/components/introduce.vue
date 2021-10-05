@@ -1,6 +1,6 @@
 <template>
     <div>
-        introduce
+        Introduce Team
     </div>
 </template>
 
