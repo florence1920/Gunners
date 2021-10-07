@@ -2,6 +2,7 @@
     <div>
         <weather></weather>
         <div class="wrapAll">
+        </div>
     </div>
 </template>
 
