@@ -70,6 +70,13 @@
                         THANK YOU GOOD BYE WENGER 
                     </p>
                 </li>
+                <li>
+                    <p class="year">2018</p>
+                    <div class="img img_arteta"></div>
+                    <p class="history_sub">
+                        THANK YOU GOOD BYE WENGER 
+                    </p>
+                </li>
             </ul>
         </div>
     </div>
@@ -114,5 +121,6 @@ export default {
 .wrapAll .introduceWrap .history_right .img_wenger {background: url(../assets/History/Wenger.jpg)no-repeat;}
 .wrapAll .introduceWrap .history_right .img_unBeaten {background: url(../assets/History/unBeaten.jpg)no-repeat;}
 .wrapAll .introduceWrap .history_right .img_gbWenger {background: url(../assets/History/GbWenger.jpg)no-repeat;}
+.wrapAll .introduceWrap .history_right .img_arteta {background: url(../assets/History/arteta.png)no-repeat;}
 
 </style>
