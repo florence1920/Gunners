@@ -1,21 +1,11 @@
 <template>
     <div class="wrapAll">
         <p class="tit">트로피</p>
-        <ul class="trophiesWrap">
+        <ul>
             <li>
-                <div class="eplTrophy"></div>
+                <div class="img"></div>
                 <p class="num">18</p>
-                <p class="leagueName">프리미어리그</p>
-            </li>
-            <li>
-                <div class="faTrophy"></div>
-                <p class="num">18</p>
-                <p class="leagueName">프리미어리그</p>
-            </li>
-            <li>
-                <div class="faTrophy"></div>
-                <p class="num">18</p>
-                <p class="leagueName">프리미어리그</p>
+                <p class="leagueName">Prrmier League</p>
             </li>
         </ul>
     </div>
@@ -25,8 +15,9 @@
 
 </script>
 
-<style>
-.WrapAll {}
-.WrapAll .trophiesWrap {overflow: hidden; width: 80%; background: #aaa; margin: 0 auto;}
-.WrapAll .trophiesWrap li {float: left;}
+<style scoped>
+.WrapAll .trophiesWrap {overflow: hidden; width: 80%; background: #aaa;}
+.WrapAll .trophiesWrap > ul > li {}
+/* .WrapAll .trophiesWrap .trophy {display: inline-block; float: left; overflow: hidden;}
+.WrapAll .trophiesWrap .trophy .trophy_font {float: left;} */
 </style>
