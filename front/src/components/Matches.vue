@@ -24,7 +24,7 @@
       </ul>
     </li>
     <li class="leagueInfo">
-      <p>Premier League logo</p>
+      <img src="../assets/League/EPL.png" alt="" width="50px">
     </li>
   </ul>
 </div>
