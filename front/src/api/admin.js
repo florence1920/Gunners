@@ -19,5 +19,9 @@ function submitMatches(matchData){
 }
 
 //경기 일정 
+function getMatches(){
+    const url = 'http://localhost:3000/admin/matches'
+    return axios.get(url);
+}
 
-export {submitLeagueTeam, getTeams, submitMatches};
+export {submitLeagueTeam, getTeams, submitMatches, getMatches};

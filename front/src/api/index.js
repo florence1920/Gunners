@@ -6,3 +6,4 @@ function checkInfo(userData){
 }
 
 export { checkInfo };
+
