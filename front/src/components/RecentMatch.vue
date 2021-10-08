@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="tit">Next Match</p>
+    <p class="tit">다음 경기</p>
     <div class="matchWrap">
       <ul class="matchDate">
         <li><p>2021년 10월 18일</p></li>
