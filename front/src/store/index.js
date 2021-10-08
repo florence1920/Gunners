@@ -58,8 +58,16 @@ export default new Vuex.Store({
     state.teams = ptsArr;
     },
     SET_MATCHES(state,matches){
+      const nowDate = new Date();
+      const matchDate = new Date(matches.data.match[12].matchData);
+      console.log(nowDate);
+      console.log(matchDate);
+      const dDate =  matchDate.getTime() - nowDate.getTime();
+      const dMinute = Math.floor(dDate/1000/60);
+      const dTime = Math.floor(dDate/1000/60/60);
+      const dDay = Math.floor(dDate/1000/60/60/12);
+      console.log(dDay, dTime, dMinute);
       state.matches = matches.data.match;
-      console.log(state.matches);
     }
   },
   actions: {

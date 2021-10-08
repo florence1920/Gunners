@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 //스키마 생성 
 const MatchSchema = mongoose.Schema({
     matchData:{
-        type: String,
+        type: Date,
     },
     ground:{
         type: String, 
