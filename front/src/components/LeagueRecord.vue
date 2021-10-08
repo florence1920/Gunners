@@ -1,6 +1,6 @@
 <template>
 <div class="listWrap">
-    <p class="tit">프리미어 리그</p>
+    <p class="tit">프리미어 리그 순위</p>
     <div class="leagueTable">
         <ul class="head">
             <li><p>순위</p></li>
