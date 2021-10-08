@@ -36,13 +36,13 @@ export default {
     },
     methods:{
         submitMatch(){
-            console.log('here');
-            submitMatches({
-                matchData : this.matchDate,
+          submitMatches({
+            matchData : this.matchDate,
                 ground : this.ground,
                 opponent : this.opponent,
                 leagueName : this.leagueName
             });
+            
         }
     },
 

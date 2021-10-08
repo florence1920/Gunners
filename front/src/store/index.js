@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import {getWeather} from '@/api/weather.js'
-import { getTeams } from '../api/admin'
+import { getMatches, getTeams } from '../api/admin'
 
 Vue.use(Vuex)
 
@@ -12,7 +12,8 @@ export default new Vuex.Store({
     },
     teams:[
 
-    ]
+    ],
+    matches:[]
   },
   mutations: {
     SET_WEATHER(state, weather){
@@ -55,6 +56,10 @@ export default new Vuex.Store({
     }
     ptsArr.sort(compare('pts','gd'));
     state.teams = ptsArr;
+    },
+    SET_MATCHES(state,matches){
+      state.matches = matches.data.match;
+      console.log(state.matches);
     }
   },
   actions: {
@@ -73,7 +78,12 @@ export default new Vuex.Store({
     async GET_TEAMLIST(context){
         const teams = await getTeams();
         context.commit('SET_TEAMLIST', teams);
-    }
+    },
+    //매치 일정 가져오기
+    async GET_MATCHES(context){
+      const matches = await getMatches();
+      context.commit('SET_MATCHES', matches);
+    },
   },
   modules: {
   }

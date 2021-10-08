@@ -85,3 +85,15 @@ app.post('/admin/matches', (req,res)=>{
     })
   })
 })
+
+app.get('/admin/matches' ,async(req,res)=>{
+  try{
+    const match = await Match.find({});
+    console.log(match);
+    res.json({
+      match
+    });
+  }catch(err){
+    res.status(500).json({message : err.message})
+  }
+})
