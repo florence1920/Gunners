@@ -3,13 +3,13 @@
     <p class="tit">Next Match</p>
     <div class="matchWrap">
       <ul class="matchDate">
-        <li><p>2021.Oct.18</p></li>
+        <li><p>2021년 10월 18일</p></li>
         <li><p>20:00</p></li>
         <li><p>Emirates Stadium</p></li>
       </ul>
       <ul class="match">
         <li class="team homeTeam">
-          <img src="../assets/EPL_LOGO/Arsenal.png" alt="" width="100px">
+          <img src="../assets/EPL_LOGO/Arsenal.png" alt="" width="80px">
           <p>Arsenal</p>
         </li>
         <div class="matchDetail">
@@ -17,7 +17,7 @@
           <div class="matchTimer"></div>
         </div>
         <li class="team awayTeam">
-          <img src="../assets/EPL_LOGO/CrystalPalace.png" alt="" width="100px">
+          <img src="../assets/EPL_LOGO/CrystalPalace.png" alt="" width="80px">
           <p>Crystal Palace</p>
         </li>
       </ul>
