@@ -37,7 +37,7 @@ export default {
     methods:{
         submitMatch(){
           submitMatches({
-            matchData : this.matchDate,
+                matchData : this.matchDate,
                 ground : this.ground,
                 opponent : this.opponent,
                 leagueName : this.leagueName
