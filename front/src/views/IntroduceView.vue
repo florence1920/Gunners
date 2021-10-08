@@ -78,6 +78,19 @@
 <script>
 
 export default {
+    created () {
+    window.addEventListener('scroll', this.handleScroll)
+    },
+    unmounted () {
+        window.removeEventListener('scroll', this.handleScroll)
+    },
+    methods: {
+        handleScroll () {
+        const st = document.scrollingElement.scrollTop
+        console.log(st)
+        
+        }
+    }
 }
 
 </script>
