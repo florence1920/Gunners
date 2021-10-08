@@ -1,5 +1,6 @@
 <template>
     <div class="wrapAll">
+        
         <div class="trophiesWrap"></div>
         <div class="history"></div>
     </div>
