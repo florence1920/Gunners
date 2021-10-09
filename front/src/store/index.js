@@ -58,15 +58,19 @@ export default new Vuex.Store({
     state.teams = ptsArr;
     },
     SET_MATCHES(state,matches){
-      const nowDate = new Date();
-      const matchDate = new Date(matches.data.match[12].matchData);
-      console.log(nowDate);
-      console.log(matchDate);
-      const dDate =  matchDate.getTime() - nowDate.getTime();
-      const dMinute = Math.floor(dDate/1000/60);
-      const dTime = Math.floor(dDate/1000/60/60);
-      const dDay = Math.floor(dDate/1000/60/60/12);
-      console.log(dDay, dTime, dMinute);
+      for(let i =0; i < matches.data.match.length; i++){
+        const nowDate = new Date();
+        const matchDate = new Date(matches.data.match[i].matchData);
+        //시간차 계산
+        const dDate =  matchDate.getTime() - nowDate.getTime();
+        const dDay = Math.floor(dDate/1000/60/60/24);
+        const dTime = Math.floor(dDate/1000/60/60) - (dDay * 24);
+        const dMinute = Math.floor(dDate/1000/60) - (dDay * 24 * 60) - (dTime * 60);
+        console.log(dDay, dTime, dMinute);
+        matches.data.match[i].time = [matchDate, dDay,dTime,dMinute];
+        //console.log(matches.data.match[i]);
+      }
+  
       state.matches = matches.data.match;
     }
   },

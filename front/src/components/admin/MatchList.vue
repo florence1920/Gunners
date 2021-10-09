@@ -1,21 +1,11 @@
 <template>
   <div>
-
-    <div class="tableWrap matchList">
-      <ul class="thead">
-        <li>경기날짜</li>
-        <li>상대</li>
-        <li>경기장</li>
-        <li>리그</li>
-      </ul>
       <ul class="trow" v-for="(match, index) in this.$store.state.matches" :key="index">
-          <li>{{match.matchData}}</li>
+          <li>{{match.time[0]}} // {{match.time}}</li>
           <li>{{match.opponent}}</li>
           <li>{{match.ground}}</li>
           <li>{{match.leagueName}}</li>
-        </ul>
-    </div>
-      
+        </ul>     
   </div>
 </template>
 
