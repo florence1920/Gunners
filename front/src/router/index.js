@@ -8,6 +8,7 @@ import AchievementView from '@/views/AchievementView.vue';
 import HonorView from '@/views/HonorView.vue';
 import ScheduleView from '@/views/ScheduleView.vue';
 import BoardView from '@/views/BoardView.vue';
+import MediaView from '@/views/MediaView.vue';
 import RegisterView from '@/views/RegisterView.vue';
 import LoginView from '@/views/LoginView.vue';
 import AdminView from '@/views/AdminView.vue';
@@ -51,6 +52,11 @@ const routes = [
     path: '/board',
     name: 'Board',
     component: BoardView
+  },
+  {
+    path: '/media',
+    name: 'Media',
+    component: MediaView
   },
   {
     path: '/register',

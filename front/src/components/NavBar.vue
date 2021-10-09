@@ -36,6 +36,7 @@
             </li>
             <li><router-link to='/schedule'>Schedule</router-link></li>
             <li><router-link to='/board'>Board</router-link></li>
+            <li><router-link to='/media'>Media</router-link></li>
             <li><router-link to='/admin'>Admin</router-link></li>
         </ul>        
     </div>
