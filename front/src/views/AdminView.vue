@@ -1,7 +1,7 @@
 <template>
     <div class="wrapAll">
       <div class="aWrap">
-        <router-link to="/admin/league">리그 수정하기</router-link>
+        <router-link to="/admin/league">프리미어 리그 순위 수정하기</router-link>
       </div>
       <div class="aWrap">
         <router-link to="/admin/matches">경기 일정 수정하기</router-link>
