@@ -1,7 +1,16 @@
 <template>
   <div class="wrapAll">
-    <MatchList></MatchList>
-    <MatchRecordInput></MatchRecordInput>
+
+    <div style="width:1100px; margin:0 auto;">
+
+      <p class="tit">입력</p>
+      <MatchRecordInput></MatchRecordInput>
+
+      <p class="tit">현황</p>
+      <MatchList></MatchList>
+      
+    </div>
+
   </div>
   
 </template>
@@ -17,6 +26,6 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+  .tit {font-size:26px; font-weight: 600; margin: 60px 0 15px;}
 </style>
