@@ -1,13 +1,13 @@
 <template>
 <div class="listWrap">
-    <p class="tit">Premier League</p>
+    <p class="tit">프리미어 리그 순위표</p>
     <div class="leagueTable">
         <ul class="head">
-            <li><p>Rank</p></li>
-            <li class="clubName"><p>Team</p></li>
-            <li><p>Pl.</p></li>
-            <li><p>Gd.</p></li>
-            <li><p>Pts.</p></li>
+            <li><p>순위</p></li>
+            <li class="clubName"><p>클럽</p></li>
+            <li><p>경기수</p></li>
+            <li><p>골득실</p></li>
+            <li><p>승점</p></li>
         </ul>
         <div class="divide"></div>
         <ul class="list">

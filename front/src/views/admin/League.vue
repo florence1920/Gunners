@@ -1,7 +1,9 @@
 <template>
   <div class="wrapAll">
-      리그 수정
-      <league-record-input></league-record-input>
+      <!-- 프리미엄 리그 순위 수정 -->
+      <div class="w1100">
+        <league-record-input></league-record-input>
+      </div>
   </div>
 </template>
 
@@ -13,6 +15,6 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+  
 </style>
