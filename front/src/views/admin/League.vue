@@ -1,7 +1,9 @@
 <template>
   <div class="wrapAll">
       <!-- 프리미엄 리그 순위 수정 -->
-      <league-record-input></league-record-input>
+      <div class="w1100">
+        <league-record-input></league-record-input>
+      </div>
   </div>
 </template>
 

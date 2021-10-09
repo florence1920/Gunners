@@ -1,18 +1,17 @@
 <template>
   <div class="wrapAll">
 
-    <div style="width:1100px; margin:0 auto;">
+    <div class="w1100">
+      <p class="head">경기 일정 관리</p>
 
       <p class="tit">입력</p>
       <MatchRecordInput></MatchRecordInput>
 
-      <p class="tit">현황</p>
+      <p class="tit">경기 일정 현황</p>
       <MatchList></MatchList>
-      
     </div>
 
-  </div>
-  
+  </div>  
 </template>
 
 <script>

@@ -1,5 +1,6 @@
 <template>
-    <div style="width:1100px; margin:0 auto;">
+    <div>
+        <p class="head">팀순위 관리</p>
 
         <p class="tit">입력</p>
         <form @submit.prevent="submitLeague"> 
@@ -20,11 +21,11 @@
                 <p>승점</p>
                 <input type="number" v-model="pts">
             </div>
-            <button type="submit" class="btn">입력</button>
+            <button type="submit" class="btn">저장</button>
         </div>
         </form>
 
-        <p class="tit">현황</p>
+        <p class="tit">팀순위 현황</p>
         <team-list></team-list>
 
     </div>

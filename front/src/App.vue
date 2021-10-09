@@ -41,7 +41,10 @@ body::-webkit-scrollbar-track {background-color: grey;}
   display: none;
 }
 
-.wrapAll {width: 100%; min-height: calc(100vh - 354px); padding: 40px; position: relative;}    
+/* basic layout */
+.wrapAll {width: 100%; min-height: calc(100vh - 354px); padding: 40px; position: relative;}
+.w1200 {width: 1200px; padding: 0; margin: 0 auto;}
+.w1100 {width: 1100px; padding: 0; margin: 0 auto;}
 .tit {font-size: 22px; font-weight: 600; color: #000; border-radius: 3px; margin: 0 0 20px;}
 .head {text-align: center; font-size:55px; font-weight: 600; margin: 40px 0 40px;}
 </style>
