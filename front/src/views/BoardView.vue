@@ -1,5 +1,6 @@
 <template>
     <div class="wrapAll w1200">
+
         <div class="tableWrap boardList">
             <p class="head">BOARD</p>
             <ul class="thead">
@@ -33,6 +34,13 @@
                 <li>2021-10-09</li>
             </ul>
         </div>
+        <!-- tableWrap end -->
+
+        <div class="btnWrap">
+            
+        </div>
+        <!-- btnWrap end -->
+
     </div>
 </template>
 
