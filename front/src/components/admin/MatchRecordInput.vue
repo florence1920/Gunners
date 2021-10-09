@@ -18,7 +18,7 @@
           <p>대회 이름</p>
           <input id="leagueName" type="text" v-model="leagueName">
         </div>
-        <button type="submit" class="btn">제출</button>
+        <button type="submit" class="btn">저장</button>
       </div>
       </form>
   </div>
