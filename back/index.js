@@ -1,11 +1,13 @@
 import express from 'express';
 const app = express();
+import bcrypt from 'bcrypt';
 const port = 3000;
 import cors from 'cors';
 import mongoose from 'mongoose';
 import User from './models/User.js'
 import League from './models/League.js'
 import Match from './models/Match.js'
+import { newToken } from './utils/auth.js';
 
 //application/json 타입 읽을 수 있도록
 app.use(express.json());
@@ -26,17 +28,73 @@ app.listen(port, () => {
 })
 
 //회원
+//1 회원 가입
 app.post('/register', (req,res)=>{
     //회원 가입 할 때 필요한 정보를 client에서 가져옴
     //데이터 베이스에 투입 !
+    //const user = new User(req.body);
     const user = new User(req.body);
-    //몽고 db에 저장
-    user.save((err,userInfo)=>{
-      if(err) return res.json({success:false,err});
-      return res.status(200).json({
-        success:true
-      })
+    bcrypt.hash(user.password, 10, (error, hashedPassword)=>{
+      if(error){
+        console.log(error);
+        return res.status(500).json({
+          error
+        });
+      }else{
+        const newUser = new User({
+          id : user.id,
+          password: hashedPassword,
+          userName : user.userName
+        });
+        newUser.save((error, saved) =>{
+          if(error){
+            console.log(error);
+            res.status(409).send(error);
+          }else{
+            console.log(saved);
+            res.send(saved)
+          }
+        });
+      }
     })
+    
+})
+//2 로그인
+app.post('/login', (req,res)=>{
+  console.log('back');
+  User.findOne({
+    id: req.body.id
+  })
+  .then(user =>{
+    if(!user){
+      res.status(401).send('Authentication failed. User not found');
+    }
+    bcrypt.compare(req.body.password, user.password, (error, result)=>{
+      if(error){
+        res.status(500).send('Internal Server Error');
+      }
+      if (result) {
+        // create token with user info
+        const token = newToken(user);
+
+        // current logged-in user
+        const loggedInUser = {
+          id: user.id,
+        };
+
+        // return the information including token as JSON
+        res.status(200).json({
+          success: true,
+          user: loggedInUser,
+          message: 'Login Success',
+          token: token,
+        });
+      } else {
+        res.status(401).json('Authentication failed. Wrong password.');
+      }
+    })
+
+  })
 })
 
 app.get('/' ,async(req,res)=>{

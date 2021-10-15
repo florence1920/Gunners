@@ -55,11 +55,9 @@ export default {
     },
     methods: {
         doMouseOver: function(index) {
-            console.log(index);
             this.showBox[index].show = true;
         },
         doMouseLeave : function(index){
-            console.log(index);
             this.showBox[index].show = false;
         }
     }

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import {getWeather} from '@/api/weather.js'
 import { getMatches, getTeams } from '../api/admin'
+import { loginUser } from '@/api/index.js'
 
 Vue.use(Vuex)
 
@@ -96,6 +97,12 @@ export default new Vuex.Store({
       const matches = await getMatches();
       context.commit('SET_MATCHES', matches);
     },
+    //Login
+    async LOGIN(context, userData){
+      const response = await loginUser(userData);
+      console.log(response);
+      return response;
+    }
   },
   modules: {
   }

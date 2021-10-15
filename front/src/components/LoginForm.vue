@@ -2,7 +2,7 @@
     <div class="wrapAll">
         <p class="head">LOGIN</p>
 
-        <form  v-on:submit.prevent="send" action="">
+        <form  v-on:submit.prevent="submitForm">
         <div class="personal_info">
             <ul class="personal">
                 <li>
@@ -23,6 +23,32 @@
 
 <script>
 export default {
+    data(){
+        return {
+            id: '',
+            password:''
+        }
+    },
+    methods:{
+        async submitForm(){
+            try {
+                const userData = {
+                    id : this.id,
+                    password : this.password        
+                };
+                
+                await this.$store.dispatch('LOGIN', userData);   
+            } catch (error) {
+                console.log(error);
+            } finally {
+                this.initForm();
+            }
+        },
+        initForm(){
+            this.id = '';
+            this.password= '';
+        }
+    }
 
 }
 </script>
