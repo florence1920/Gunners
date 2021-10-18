@@ -3,6 +3,12 @@ import Vuex from 'vuex'
 import {getWeather} from '@/api/weather.js'
 import { getMatches, getTeams } from '../api/admin'
 import { loginUser } from '@/api/index.js'
+import { getAuthFromCookie,
+          getUserFromCookie,
+          saveAuthToCookie,
+          saveUserToCookie,
+          //deleteCookie
+} from '@/utils/cookies'
 
 Vue.use(Vuex)
 
@@ -14,7 +20,11 @@ export default new Vuex.Store({
     teams:[
 
     ],
-    matches:[]
+    matches:[
+      
+    ],
+    token: getAuthFromCookie || '',
+    id : getUserFromCookie || '',
   },
   mutations: {
     SET_WEATHER(state, weather){
@@ -73,6 +83,12 @@ export default new Vuex.Store({
       }
   
       state.matches = matches.data.match;
+    },
+    SET_TOKEN(state,token){
+      state.token = token;
+    },
+    SET_USERNAME(state,id){
+      state.id = id;
     }
   },
   actions: {
@@ -101,6 +117,11 @@ export default new Vuex.Store({
     async LOGIN(context, userData){
       const response = await loginUser(userData);
       console.log(response);
+      context.commit('SET_TOKEN',response.data.token);
+      context.commit('SET_USERNAME',response.data.user.id);
+      //cookie 저장
+      saveAuthToCookie(response.data.token);
+      saveUserToCookie(response.data.user.id);
       return response;
     }
   },

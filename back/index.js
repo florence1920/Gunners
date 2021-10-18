@@ -66,6 +66,7 @@ app.post('/login', (req,res)=>{
     id: req.body.id
   })
   .then(user =>{
+    console.log(user);
     if(!user){
       res.status(401).send('Authentication failed. User not found');
     }
