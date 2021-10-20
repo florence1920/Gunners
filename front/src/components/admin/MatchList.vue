@@ -9,7 +9,7 @@
                 <li>리그</li>
             </ul>
             <ul class="trow" v-for="(match, index) in this.$store.state.matches" :key="index">
-                <li>{{match.time[0]}} // {{match.time}}</li>
+                <li>{{match.time[0]}}</li>
                 <li>{{match.opponent}}</li>
                 <li>{{match.ground}}</li>
                 <li>{{match.leagueName}}</li>

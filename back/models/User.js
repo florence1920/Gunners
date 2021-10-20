@@ -2,7 +2,7 @@ import  mongoose  from "mongoose";
 
 //스키마 생성
 const UserSchema = mongoose.Schema({
-    name:{
+    userName:{
         type: String,
         maxlength:50
     },
@@ -13,7 +13,6 @@ const UserSchema = mongoose.Schema({
     },
     password:{
         type: String,
-        maxlength:50
     }
 })
 

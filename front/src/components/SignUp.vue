@@ -15,7 +15,7 @@
                 </li>
                 <li>
                     <p>NAME</p>
-                    <input type="text" name="name" v-model="name">
+                    <input type="text" name="userName" v-model="userName">
                 </li>
             </ul>
             <input type="submit" value="SIGNUP" class="btn"/>
@@ -26,13 +26,13 @@
 </template>
 
 <script>
-import { checkInfo } from '@/api/index.js';
+import { checkUser } from '@/api/index.js';
 export default {
     data : function(){
         return{
             id : '',
             password : '',
-            name : ''
+            userName : ''
         }
     },
     methods:{
@@ -40,9 +40,9 @@ export default {
             const userData = {
                 id : this.id,
                 password : this.password,
-                name : this.name
+                userName : this.userName
             };
-            checkInfo(userData);
+            checkUser(userData);
             console.log('send');
         }
     }
