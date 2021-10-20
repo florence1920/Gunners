@@ -26,6 +26,11 @@ export default new Vuex.Store({
     token: getAuthFromCookie || '',
     id : getUserFromCookie || '',
   },
+  getters: {
+    isLogin(state) {
+      return state.id !== '';
+    },
+  },
   mutations: {
     SET_WEATHER(state, weather){
       state.weather = weather;

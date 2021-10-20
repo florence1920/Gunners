@@ -4,6 +4,13 @@
         <div class="logo"></div>
         </router-link>
         <ul class="memberCont">
+            <template v-if="isUserLogin">
+                <li>{{this.$store.state.id}}</li>
+                <li><a href="javascript:;" @click="logoutUser">Logout</a></li>
+            </template>
+            <template v-else>
+                <li>Nope</li>
+            </template>
             <li><router-link to='/logIn'>
                 <img src="../assets/logIn.png" alt="" width="29px">
             </router-link></li>
@@ -53,12 +60,21 @@ export default {
         }
     
     },
+    computed: {
+        isUserLogin() {
+            console.log(this.$store.getters.isLogin);
+          return this.$store.getters.isLogin;
+        },
+    },
     methods: {
         doMouseOver: function(index) {
             this.showBox[index].show = true;
         },
         doMouseLeave : function(index){
             this.showBox[index].show = false;
+        },
+        logoutUser : function(){
+            this.$store.commit('clearUsername');
         }
     }
 
