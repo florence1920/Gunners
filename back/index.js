@@ -7,6 +7,7 @@ import mongoose from 'mongoose';
 import User from './models/User.js'
 import League from './models/League.js'
 import Match from './models/Match.js'
+import Player from './models/Player.js'
 import { newToken } from './utils/auth.js';
 
 //application/json 타입 읽을 수 있도록
@@ -148,9 +149,32 @@ app.post('/admin/matches', (req,res)=>{
 app.get('/admin/matches' ,async(req,res)=>{
   try{
     const match = await Match.find({});
-    console.log(match);
     res.json({
       match
+    });
+  }catch(err){
+    res.status(500).json({message : err.message})
+  }
+})
+
+//player
+app.post('/admin/player', (req,res)=>{
+  const player = new Player(req.body);
+  console.log(player);
+  player.save((err)=>{
+    if(err) return res.json({success:false,err});
+    return res.status(200).json({
+      success:true
+    })
+  })
+})
+
+app.get('/admin/player' ,async(req,res)=>{
+  console.log('hey');
+  try{
+    const player = await Player.find({});
+    res.json({
+      player
     });
   }catch(err){
     res.status(500).json({message : err.message})

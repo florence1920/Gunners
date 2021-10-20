@@ -24,4 +24,17 @@ function getMatches(){
     return axios.get(url);
 }
 
-export {submitLeagueTeam, getTeams, submitMatches, getMatches};
+//선수 스탯 입력
+function submitPlayer(playerStats){
+    const url = 'http://localhost:3000/admin/player'
+    console.log(playerStats);
+    return axios.post(url, playerStats);
+}
+
+//선수 스탯 가져오기 
+function getPlayer(){
+    const url = 'http://localhost:3000/admin/player'
+    return axios.get(url);
+}
+
+export {submitLeagueTeam, getTeams, submitMatches, getMatches, submitPlayer, getPlayer};

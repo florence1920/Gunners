@@ -21,7 +21,7 @@
 <script>
 export default {
   created(){
-    this.$store.dispatch('GET_MATCHES');
+    this.$store.dispatch('GET_PLAYER');
   }
 }
 </script>
