@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import {getWeather} from '@/api/weather.js'
-import { getMatches, getTeams } from '../api/admin'
+import { getMatches, getTeams, getPlayer } from '../api/admin'
 import { loginUser } from '@/api/index.js'
 import { getAuthFromCookie,
           getUserFromCookie,
@@ -22,6 +22,9 @@ export default new Vuex.Store({
     ],
     matches:[
       
+    ],
+    players:[
+
     ],
     token: getAuthFromCookie || '',
     id : getUserFromCookie || '',
@@ -89,6 +92,9 @@ export default new Vuex.Store({
   
       state.matches = matches.data.match;
     },
+    SET_PLAYER(state,players){
+      state.players = players.data.player;
+    },
     SET_TOKEN(state,token){
       state.token = token;
     },
@@ -117,6 +123,12 @@ export default new Vuex.Store({
     async GET_MATCHES(context){
       const matches = await getMatches();
       context.commit('SET_MATCHES', matches);
+    },
+    //선수 스탯 가져오기
+    async GET_PLAYER(context){
+      const player = await getPlayer();
+      console.log(player);
+      context.commit('SET_PLAYER', player);
     },
     //Login
     async LOGIN(context, userData){
