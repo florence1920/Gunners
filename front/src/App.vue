@@ -42,7 +42,7 @@ body::-webkit-scrollbar-track {background-color: grey;}
 }
 
 /* basic layout */
-.wrapAll {width: 100%; min-height: calc(100vh - 354px); position: relative;}
+.wrapAll {overflow: hidden; width: 100%; min-height: calc(100vh - 354px); position: relative;}
 .w1200 {width: 1200px; padding: 0; margin: 0 auto;}
 .w1100 {width: 1100px; padding: 0; margin: 0 auto;}
 .tit {font-size: 22px; font-weight: 600; color: #000; border-radius: 3px; margin: 0 0 20px;}
