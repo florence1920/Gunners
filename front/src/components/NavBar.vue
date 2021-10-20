@@ -26,13 +26,7 @@
                     <li><router-link to=''>Stat</router-link></li>
                 </ul> 
             </li> -->
-            <li v-on:mouseover="doMouseOver(0)" v-on:mouseleave="doMouseLeave(0)">
-                <a class="block">Squad</a>
-                <ul v-show="showBox[0].show" class="depth">
-                    <li><router-link to='/formation'>Formation</router-link></li>
-                    <li><router-link to='/player'>Player</router-link></li>
-                </ul> 
-            </li>
+            <li><router-link to='/club'>Club</router-link></li>
             <li v-on:mouseover="doMouseOver(1)" v-on:mouseleave="doMouseLeave(1)">
                 <a class="block">History</a>
                 <ul v-show="showBox[1].show" class="depth">

@@ -1,8 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import MainView from '@/views/MainView.vue';
-import FormationView from '@/views/FormationView.vue';
-import PlayerView from '@/views/PlayerView.vue';
+import ClubView from '@/views/ClubView.vue';
 import IntroduceView from '@/views/IntroduceView.vue';
 import AchievementView from '@/views/AchievementView.vue';
 import HonorView from '@/views/HonorView.vue';
@@ -19,14 +18,9 @@ Vue.use(VueRouter)
 
 const routes = [  
   {
-    path: '/formation',
-    name: 'Formation',
-    component: FormationView
-  },
-  {
-    path: '/player',
-    name: 'Player',
-    component: PlayerView
+    path: '/club',
+    name: 'Club',
+    component: ClubView
   },
   {
     path: '/introduce',
