@@ -5,7 +5,7 @@
         <ul class="adminMain">
           <li><router-link to="/admin/league">리그 순위<br/>관리</router-link></li>
           <li><router-link to="/admin/matches">경기 일정<br/>관리</router-link></li>
-          <li><router-link to="/admin/team">팀 기록<br/>관리</router-link></li>
+          <li><router-link to="/admin/player">팀 기록<br/>관리</router-link></li>
           <li><router-link to="">메뉴4<br/>준비중</router-link></li>
           <li><router-link to="">메뉴5<br/>준비중</router-link></li>
           <li><router-link to="">메뉴6<br/>준비중</router-link></li>
