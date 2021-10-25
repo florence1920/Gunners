@@ -14,6 +14,7 @@ import AdminView from '@/views/AdminView.vue';
 import League from '@/views/admin/League.vue';
 import Matches from '@/views/admin/Matches.vue';
 import Player from '@/views/admin/Player.vue';
+import EditPlayer from '@/views/admin/PlayerEdit.vue'
 
 Vue.use(VueRouter)
 
@@ -82,6 +83,11 @@ const routes = [
     path: '/admin/player',
     name: 'AdminPlayer',
     component: Player
+  },
+  {
+    path: '/admin/player/edit/:player',
+    name: 'EditPlayer',
+    component: EditPlayer
   },
   {
     path: '/',

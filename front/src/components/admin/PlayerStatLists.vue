@@ -14,16 +14,9 @@
         <li>{{player.position.kPos}}</li> 
         <li>{{player.position.ePos}}</li>
         <li>{{player.nation}}</li>
+        <button v-on:click="editPlayer(player.playerName)">수정하기</button>
     </ul>
-    <form action="">
-        <ul class="trow" v-for="(player, index) in this.$store.state.players" v-bind:key="index">
-            <li><input type="text" v-model="player.playerName"></li>
-            <li><input type="number" v-model="player.backNumber"></li>
-            <li><input type="text" v-model="player.position.kPos"></li>
-            <li><input type="text" v-model="player.position.ePos"></li>
-            <li><input type="text" v-model="player.nation"></li>
-        </ul>
-    </form>
+    
         
     </div>
 
@@ -42,7 +35,9 @@ export default {
     
   },
   methods:{
-    
+    editPlayer(player){
+      this.$router.push(`/admin/player/edit/${player}`)
+    }
   }
 }
 </script>
