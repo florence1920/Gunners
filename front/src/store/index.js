@@ -127,7 +127,6 @@ export default new Vuex.Store({
     //선수 스탯 가져오기
     async GET_PLAYER(context){
       const player = await getPlayer();
-      console.log(player);
       context.commit('SET_PLAYER', player);
     },
     //Login

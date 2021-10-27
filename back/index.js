@@ -170,11 +170,39 @@ app.post('/admin/player', (req,res)=>{
 })
 
 app.get('/admin/player' ,async(req,res)=>{
-  console.log('hey');
   try{
     const player = await Player.find({});
     res.json({
       player
+    });
+  }catch(err){
+    res.status(500).json({message : err.message})
+  }
+})
+
+//특정 선수 
+app.get('/admin/player/edit/:player' ,async(req,res)=>{
+  try{
+    const player = await Player.findOne({
+      playerName : req.params.player
+    });
+    res.json({
+      player
+    });
+  }catch(err){
+    res.status(500).json({message : err.message})
+  }
+})
+
+//특정선수 데이터 수정
+app.put('/admin/player/edit/:player' ,async(req,res)=>{
+  try{
+    const updatePlayer = await Player.findOneAndUpdate(
+      {playerName : req.params.player},
+      req.body
+    )
+    res.json({
+      updatePlayer
     });
   }catch(err){
     res.status(500).json({message : err.message})
