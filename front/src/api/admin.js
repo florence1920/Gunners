@@ -27,7 +27,6 @@ function getMatches(){
 //선수 스탯 입력
 function submitPlayer(playerStats){
     const url = 'http://localhost:3000/admin/player'
-    console.log(playerStats);
     return axios.post(url, playerStats);
 }
 
@@ -37,4 +36,17 @@ function getPlayer(){
     return axios.get(url);
 }
 
-export {submitLeagueTeam, getTeams, submitMatches, getMatches, submitPlayer, getPlayer};
+//선수 스탯(이름) 가져오기
+function getPlayerByName(player){
+    const url = `http://localhost:3000/admin/player/edit/${player}`
+    return axios.get(url);
+}
+
+//선수 스탯 수정
+function editPlayerByName(player, data){
+    const url = `http://localhost:3000/admin/player/edit/${player}`
+    console.log(data);
+    return axios.put(url, data);
+}
+
+export {submitLeagueTeam, getTeams, submitMatches, getMatches, submitPlayer, getPlayer, getPlayerByName, editPlayerByName};

@@ -56,7 +56,6 @@ export default {
     },
     computed: {
         isUserLogin() {
-            console.log(this.$store.getters.isLogin);
           return this.$store.getters.isLogin;
         },
     },
