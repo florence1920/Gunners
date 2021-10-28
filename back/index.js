@@ -208,3 +208,17 @@ app.put('/admin/player/edit/:player' ,async(req,res)=>{
     res.status(500).json({message : err.message})
   }
 })
+
+//특정 선수 데이터 삭제 
+app.delete('/admin/player', async(req,res) => {
+  try {
+    const removed = await Player.findOneAndRemove({
+      playerName : req.body.player
+    })
+    res.json({
+      removed
+    })
+  } catch (error) {
+    res.status(500).json({message : err.message})
+  }
+})

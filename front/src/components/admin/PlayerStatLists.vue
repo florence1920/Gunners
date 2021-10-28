@@ -15,6 +15,7 @@
         <li>{{player.position.ePos}}</li>
         <li>{{player.nation}}</li>
         <button v-on:click="editPlayer(player.playerName)">수정하기</button>
+        <button v-on:click="removePlayer(player.playerName)">삭제하기</button>
     </ul>
     
         
@@ -24,19 +25,27 @@
 </template>
 
 <script>
+import {deletePlayer} from '@/api/admin.js'
 export default {
   data() {
     return {
     }
   },
   created(){
-    
     this.$store.dispatch('GET_PLAYER');
-    
   },
   methods:{
     editPlayer(player){
       this.$router.push(`/admin/player/edit/${player}`)
+    },
+    async removePlayer(player){
+      try {
+        const response = await deletePlayer(player);
+        console.log(response);
+        this.$store.dispatch('GET_PLAYER');
+      } catch (error) {
+        console.log(error);
+      }
     }
   }
 }

@@ -45,8 +45,15 @@ function getPlayerByName(player){
 //선수 스탯 수정
 function editPlayerByName(player, data){
     const url = `http://localhost:3000/admin/player/edit/${player}`
-    console.log(data);
     return axios.put(url, data);
 }
 
-export {submitLeagueTeam, getTeams, submitMatches, getMatches, submitPlayer, getPlayer, getPlayerByName, editPlayerByName};
+//선수 수탯 삭제
+function deletePlayer(player){
+    const url = `http://localhost:3000/admin/player`
+    return axios.delete(url,{data:{
+       player 
+    }});
+}
+
+export {submitLeagueTeam, getTeams, submitMatches, getMatches, submitPlayer, getPlayer, getPlayerByName, editPlayerByName, deletePlayer};
