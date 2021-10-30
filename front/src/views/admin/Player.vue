@@ -2,7 +2,7 @@
     <div class="wrapAll">
 
     <div class="w1100">
-      <p class="head">팀 경기 관리</p>
+      <p class="head">선수 스탯 관리</p>
 
       <p class="tit">입력</p>
       <player-stat-input></player-stat-input>
