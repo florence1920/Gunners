@@ -83,6 +83,7 @@ export default {
   .inputrowWrap .inputrow.last {width: 49%; margin: 0 0 15px 0;}
   .inputrowWrap .inputrow p {display: inline-block; width: 100px; color:#666; font-size:13px; font-weight: 600; margin: 0 0 5px;}
   .inputrowWrap .inputrow input {width: 100%; line-height: 45px; text-indent: 15px;}
+  .inputrowWrap .inputrow select {width: 100%; height: 45px; text-indent: 15px;}
   .btn {display: block; width: 110px; line-height: 47px; background: #333; border: 0; border-radius: 0; color:#fff; font-size:13px; cursor: pointer; margin: 100px auto 0;}
   .btn:hover {background: #000;}
 </style>
