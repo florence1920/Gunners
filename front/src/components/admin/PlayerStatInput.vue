@@ -47,6 +47,12 @@ export default {
         }
     },
     methods:{
+        initForm(){
+          this.playerName = '';
+          this.backNumber = '';
+          this.position.kPos = '';
+          this.nation = '';
+        },
         async submitPlayer(){
           try {
             const response = await submitPlayer({
@@ -60,11 +66,10 @@ export default {
             });
             console.log(response);
             this.$store.dispatch('GET_PLAYER');
+            this.initForm();
           } catch (error) {
             console.log(error);
           }
-          
-            
         },
         posSelect(){
             if(this.kPos === '공격수'){
