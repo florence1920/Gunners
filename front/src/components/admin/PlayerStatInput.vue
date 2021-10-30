@@ -47,8 +47,9 @@ export default {
         }
     },
     methods:{
-        submitPlayer(){
-          submitPlayer({
+        async submitPlayer(){
+          try {
+            const response = await submitPlayer({
                 playerName : this.playerName,
                 backNumber : this.backNumber,
                 position : {
@@ -57,6 +58,12 @@ export default {
                 },
                 nation : this.nation
             });
+            console.log(response);
+            this.$store.dispatch('GET_PLAYER');
+          } catch (error) {
+            console.log(error);
+          }
+          
             
         },
         posSelect(){

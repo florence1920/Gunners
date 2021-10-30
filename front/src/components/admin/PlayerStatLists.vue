@@ -74,6 +74,6 @@ export default {
   .teamList .trow li:nth-child(3) {width:10%;}
   .teamList .trow li:nth-child(4) {width:10%;}
   .teamList .trow li:nth-child(5) {width:15%;}
-  
+
   .btn {width: 90px; line-height: 28px; background: #333; border: 0; border-radius: 0; color:#fff; font-size:13px; cursor: pointer; margin: 15px 5px 0;}
 </style>
